@@ -1,0 +1,55 @@
+{
+  "sites": [
+    {
+      "des": "斗鱼主机游戏人很多",
+      "siteName": "斗鱼",
+      "protocol":"https",
+      "recommendPrefix": "https://www.douyu.com/directory/game/",
+      "recommendCates": {
+        "lol": "lol",
+        "ow": "overwatch",
+        "hs": "how",
+        "dota2": "dota2",
+        "otherGame": "tvgame"
+      }
+    },
+    {
+      "siteName": "熊猫",
+      "protocol":"http",
+      "recommendPrefix": "http://www.panda.tv/cate/",
+      "recommendCates": {
+        "lol": "lol",
+        "ow": "overwatch",
+        "hs": "hearthstone",
+        "dota2": "dota2",
+        "otherGame": "zhuji"
+      }
+    },
+    {
+      "des": "lol>炉石=主机游戏=穿越火线>dnf=qq飞车>",
+      "siteName": "虎牙",
+      "protocol":"http",
+      "recommendPrefix": "http://www.huya.com/g/",
+      "recommendCates": {
+        "lol": "lol",
+        "ow": "overwatch",
+        "hs": "393",
+        "dota2": "7",
+        "otherGame": "1964"
+      }
+    },
+    {
+      "des": "lol人很多,炉石可以,守望不如炉石,dota2人很少,连守望都不如,王者荣耀也很少",
+      "siteName": "战旗",
+      "protocol":"https",
+      "recommendPrefix": "https://www.zhanqi.tv/",
+      "recommendCates": {
+        "lol": "games/lol",
+        "ow": "chns/blizzard/watch",
+        "hs": "chns/blizzard/how",
+        "dota2": "games/dota2",
+        "otherGame": "games/danji"
+      }
+    }
+  ]
+}
