@@ -10,12 +10,14 @@ http.createServer(function(request, response) {
     var headers = request.headers;
     var method = request.method;
     var body = request.body;
+    console.log('recieve request');
     request.on('error', function(err) {
         common.handleError(err,"create server");
     }).on('data', function(chunk) {
         body.push(chunk);
     }).on('end', function() {
         if (url == '/lolrecommend'){
+            console.log('in lolrecommend');
             var connection = mysql.createConnection({
                 host: common.host,
                 user: common.user,
