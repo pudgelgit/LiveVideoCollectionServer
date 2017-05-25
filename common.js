@@ -194,7 +194,7 @@ exports.heroList = [];
 //database info
 exports.host = 'localhost';
 exports.user = 'root';
-exports.password = '';
+exports.password = '6731909';
 exports.databaseName = 'LiveVideoCollection';
 exports.recommendTableName = 'recommend_anchors';
 exports.famousAnchorsTableName = 'famous_anchors';
