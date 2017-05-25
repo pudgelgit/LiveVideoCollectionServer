@@ -3,7 +3,7 @@
  */
 var mysql = require('mysql');
 var http = require('http');
-var common = require('./aa');
+var common = require('./common');
 var rxjs = require('rxjs');
 http.createServer(function(request, response) {
     var url = request.url;
@@ -11,7 +11,7 @@ http.createServer(function(request, response) {
     var method = request.method;
     var body = request.body;
     request.on('error', function(err) {
-        common.handleError(err,);
+        common.handleError(err,"create server");
     }).on('data', function(chunk) {
         body.push(chunk);
     }).on('end', function() {
@@ -26,7 +26,7 @@ http.createServer(function(request, response) {
             connection.connect();
             var sql = 'select * from '+common.recommendTableName + ' where cate = \'' + 'lol' +'\';' ;
             connection.query(sql,function(err, rows, fields) {
-                if (err) throw common.handleError(err,__file,__line);
+                if (err) throw common.handleError(err,'query recommend anchors');
                 // console.log('查询结果为:', rows);
                 response.statusCode = 200;
                 response.setHeader('Content-Type', 'application/json');
@@ -37,16 +37,15 @@ http.createServer(function(request, response) {
             connection.end();
         }else{
             // BEGINNING OF NEW STUFF
-
             response.on('error', function(err) {
                 console.error(err);
+                common.handleError(err,'response');
             });
-
             response.statusCode = 200;
             response.setHeader('Content-Type', 'application/json');
-            response.setHeader('Access-Control-Allow-Origin','*');
             // Note: the 2 lines above could be replaced with this next one:
             // response.writeHead(200, {'Content-Type': 'application/json'})
+            response.setHeader('Access-Control-Allow-Origin','*');
 
             var responseBody = {
                 headers: headers,

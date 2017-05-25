@@ -186,7 +186,7 @@ export function huyaParseRecommend(htmlContent:string,cate:LiveCate){
 
 export function sqlToDB(sql,callback ?: Function){
     connection.query(sql,function(err, rows, fields) {
-        if (err) handleError(err);
+        if (err) handleError(err,'sqlToDB');
         // console.log('查询结果为:', rows);
         if (callback){
             callback(rows);
@@ -213,7 +213,7 @@ export let heroList:[] = [];
 //database info
 export let host = 'localhost';
 export let user = 'root';
-export let password = '';
+export let password = '6731909';
 export let databaseName = 'LiveVideoCollection';
 export let recommendTableName = 'recommend_anchors';
 export let famousAnchorsTableName = 'famous_anchors';

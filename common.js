@@ -167,7 +167,7 @@ exports.huyaParseRecommend = huyaParseRecommend;
 function sqlToDB(sql, callback) {
     connection.query(sql, function (err, rows, fields) {
         if (err)
-            handleError(err);
+            handleError(err, 'sqlToDB');
         // console.log('查询结果为:', rows);
         if (callback) {
             callback(rows);

@@ -38,7 +38,6 @@ function recommend() {
             i++;
         }
     }
-    ;
     Promise.all(promises).then(function (values) {
         for (var i = 0; i < values.length; i++) {
             if (values[i] != null) {
@@ -103,7 +102,7 @@ function recommend() {
         });
     }
     //将抓取的推荐内容写入数据库
-    function writeRecommendDataToDb(recommendData, cate) {
+    function writeRecommendDataToDb(recommendData) {
         var sql = 'delete from ' + common.recommendTableName + ';';
         sql += 'insert into ' + common.recommendTableName + ' (anchorName,viewNum,address,roomName,siteName,cate,position,hero,tags) values ';
         var values = common.objectArrayToSQLValues(recommendData, ['anchorName', 'viewNum', 'address', 'roomName', 'siteName', 'cate', 'position', 'hero', 'tags']);
