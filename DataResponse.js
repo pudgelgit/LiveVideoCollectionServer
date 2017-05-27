@@ -16,8 +16,8 @@ http.createServer(function(request, response) {
     }).on('data', function(chunk) {
         body.push(chunk);
     }).on('end', function() {
-        if (url == '/lolrecommend'){
-            console.log('in lolrecommend');
+        if (url == '/recommend'){
+            console.log('in recommend');
             var connection = mysql.createConnection({
                 host: common.host,
                 user: common.user,
@@ -26,14 +26,14 @@ http.createServer(function(request, response) {
                 multipleStatements: true
             });
             connection.connect();
-            var sql = 'select * from '+common.recommendTableName + ' where cate = \'' + 'lol' +'\';' ;
+            var sql = 'select * from '+common.recommendTableName ;
             connection.query(sql,function(err, rows, fields) {
                 if (err) throw common.handleError(err,'query recommend anchors');
                 // console.log('查询结果为:', rows);
                 response.statusCode = 200;
                 response.setHeader('Content-Type', 'application/json');
                 response.setHeader('Access-Control-Allow-Origin','*');
-                response.write(JSON.stringify(rows));
+                response.write(JSON.stringify({'recommendAnchors':rows}));
                 response.end();
             });
             connection.end();
@@ -58,10 +58,6 @@ http.createServer(function(request, response) {
 
             response.write(JSON.stringify(responseBody));
             response.end();
-            // Note: the 2 lines above could be replaced with this next one:
-            // response.end(JSON.stringify(responseBody))
-
-            // END OF NEW STUFF
         }
 
     });

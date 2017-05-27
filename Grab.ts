@@ -18,7 +18,8 @@ import timer = require('timers');
 
 timer.setInterval(function () {
     common.sqlToDB('SELECT * FROM `lolheros`',result => {
-        if (!result) {
+        if (typeof (result) != 'undefined' && result != null) {
+            console.log('lolheros:'+result);
             for (let i = 0; i < result.length; i++) {
                 let hero = {name: result[i].name, position: result[i].position, shownName: result[i].shownName};
                 let alias = result[i].alias.split(',');
@@ -29,7 +30,7 @@ timer.setInterval(function () {
     });
     grabFamousAnchors();
     recommend();
-},100000);
+},10000);
 
 //LOL推荐项目
 function recommend() {
