@@ -11,7 +11,6 @@ var siteConferenceData = require('./site-conference.json');
 timer.setInterval(function () {
     common.sqlToDB('SELECT * FROM `lolheros`', function (result) {
         if (typeof (result) != 'undefined' && result != null) {
-            console.log('lolheros:' + result);
             for (var i = 0; i < result.length; i++) {
                 var hero = { name: result[i].name, position: result[i].position, shownName: result[i].shownName };
                 var alias_1 = result[i].alias.split(',');
@@ -22,7 +21,7 @@ timer.setInterval(function () {
     });
     grabFamousAnchors();
     recommend();
-}, 10000);
+}, 60000);
 //LOL推荐项目
 function recommend() {
     var recommendData = [];
@@ -85,7 +84,6 @@ function recommend() {
                                 break;
                             default:
                         }
-                        console.log('success to parse:' + siteName + ' ' + cate);
                         solve(result);
                     }
                     catch (e) {

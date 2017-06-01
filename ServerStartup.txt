@@ -1,0 +1,3 @@
+#!/bin/bash
+node ~/Documents/Projects/LiveVideoCollectionServer/Grab.js &
+node ~/Documents/Projects//LiveVideoCollectionServer/DataResponse.js &
