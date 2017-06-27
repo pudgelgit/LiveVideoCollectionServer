@@ -5,6 +5,7 @@ var mysql = require('mysql');
 var http = require('http');
 var common = require('./common');
 var rxjs = require('rxjs');
+//创建响应服务
 http.createServer(function(request, response) {
     var url = request.url;
     var headers = request.headers;
@@ -16,7 +17,6 @@ http.createServer(function(request, response) {
         body.push(chunk);
     }).on('end', function() {
         if (url == '/recommend'){
-            console.log('in recommend');
             var connection = mysql.createConnection({
                 host: common.host,
                 user: common.user,
@@ -39,7 +39,6 @@ http.createServer(function(request, response) {
         }else{
             // BEGINNING OF NEW STUFF
             response.on('error', function(err) {
-                console.error(err);
                 common.handleError(err,'response');
             });
             response.statusCode = 200;

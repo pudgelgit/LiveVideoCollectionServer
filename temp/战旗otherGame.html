@@ -1,0 +1,653 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <title>【单机游戏直播|视频】-战旗高清游戏直播平台</title>
+    <meta name="Keywords" content="单机游戏直播，单机游戏视频">
+    <meta name="baidu-site-verification" content="516ff41f0edfc60cd441b2f7daa9d528"/>
+    <meta name="Description" content="单机游戏高清直播视频尽在战旗直播-zhanqi.tv">
+    <meta property="wb:webmaster" content="fb35e99491ae9eed" />
+        <link rel="stylesheet" type="text/css" href="//static.zhanqi.tv/assets/web/static/c/??reset.css,base.css,common.css,ibox.css,yanhua-show.css,skin.css?v=20170627.0201">
+    <link rel="stylesheet" type="text/css" href="//static.zhanqi.tv/assets/web/static/c/index/??common.css,skin.css?v=20170627.0201">
+        
+<link rel="stylesheet" type="text/css" href="//static.zhanqi.tv/assets/web/static/c/live-list.css?v=20170627.02">
+<link rel="stylesheet" type="text/css" href="//static.zhanqi.tv/assets/web/static/c/index/live_list_tabc.css?v=20170627.02">
+
+    <link rel="stylesheet" type="text/css" href="//static.zhanqi.tv/assets/web/static/c/font-icons.css?v=20170627.02">
+    <link rel="stylesheet" type="text/css" href="//static.zhanqi.tv/assets/web/static/c/media.css?v=20170627.0202">
+    <style type="text/css">
+      .footArea .right-area li .icon{
+        margin-right:5px;
+        width:16px;height:16px;
+        background-image:url(//static.zhanqi.tv/assets/web/static/i/new-zq-foot-icon2.png?v=20170627.02);
+      }
+    </style>
+    <script type="text/javascript">
+      +function(){
+        var aMobileType = ['iphone', 'ipad', 'android', 'mobile', 'playstation'];
+        function checkMobileUA(){
+          try{
+            var nav = navigator.userAgent.toLocaleLowerCase()
+              , ua = '';
+
+            for( var i = 0, len = aMobileType.length; i < len; i++ ){
+              if( !ua && -1 < nav.indexOf( aMobileType[i] ) ){
+                ua = aMobileType[i];
+              }
+            }
+            if( !ua && -1 < nav.indexOf('mac') ){
+              ua = 'mac';
+            }
+          } catch(e){}
+
+          return ua;
+        }
+
+        var ua = checkMobileUA()
+          , host = window.location.host.toLocaleLowerCase();
+
+                if( 'm.zhanqi.tv' != host && ua && -1 < aMobileType.indexOf(ua) ){
+          window.location.href = 'http://m.zhanqi.tv' + window.location.pathname + window.location.search + window.location.hash;
+        }
+              }();
+    </script>
+    <script>
+      window.ie678 = !-[1,];
+      var isWin8 = navigator.userAgent.indexOf("Windows NT 6.2") > -1 || navigator.userAgent.indexOf("Windows 8") > -1;
+      window.oPageConfig = {
+        oUrl: {
+          sUrlHost: 'https://www.zhanqi.tv/'
+        , sUrlBase: '//static.zhanqi.tv/assets/web/static/'
+        , sUrlFlash: '//static.zhanqi.tv/assets/swf/'
+        , sUrlHistory: '/api/user/record.watch_list'
+        , sUrlHistoryClear: '/api/user/record.watch_clean'
+        , sUrlFollowList: '/api/user/follow.list'
+        , sUrlFollow: '/api/user/follow${type}'///toggle
+        , sUrlLogout: '/api/auth/user.logout'
+        , sUrlValidate: '/api/public/validate.${type}'
+        , sUrlLoginJump: '/common/login.html?redirect='
+        , sGetLeftMenuInfoUrl: '/u/follow_watch/get'
+        , sSuggestUrl: '/user/suggest'
+        , sGetLoginInfoUrl: '/api/user/user.info'
+        , sWatchRecord: '/api/user/record.watch?type=${type}&id=${id}'
+        , sAnchorApplyUrl: '/anchor/apply/step1'
+        , sLiveStatusUrl: '/api/public/room.liveparam?room_id=${roomId}'
+        , sGetRichUrl: '/api/user/rich.get'
+        , sUserInfoUrl: '/user/info'
+        , sTaskReceiveUrl: '/api/actives/task/info.receive'
+        , sShareReturnUrl: '/api/actives/chance/send.share'
+        , sSgamerActiveUrl: '/api/actives/crazydec/sgamer.send'
+        , sGetCaptchaUrl: '/api/auth/user.captcha'
+        , sGetWebGameUrl: 'https://2133.zhanqi.tv/index.php?r=zqAjaxdata/getGameData'
+        , sAdminPanelListUrl: '/api/user/block.list/${roomId}/${nums}-${page}.json'
+        , sGetTokenUrl: 'https://www.zhanqi.tv/api/open/cas.token?appid=${appid}'
+        , sGetWebGameTaskCntUrl: 'https://2133.zhanqi.tv/index.php?r=zqAjaxTask/getToEndNum'
+        , sAppDownUrl: '/common/apps.html'
+        , sRegistPhoneCode: '/api/auth/user.send_code'
+        , sGlobalGetPhoneCodeUrl: '/api/user/user.mobile_voice'
+        , sPhoneCheckSubmitUrl: '/api/user/user.mobile_voice'
+        , sKeepCardBuyUrl: '/api/actives/ticket/index.keepCard'
+        , sSiteInvisibleStatusUrl: '/api/user/user.online'
+        , sLoadVdescUrl: '/api/public/user.vinfo?uid=${uid}'
+                , sLoadMedalUrl: 'https://img2.zhanqi.tv/uploads/active/am.json'
+                , sLoadRecommendRoomsUrl: '/api/static/v2.1/rec/rooms/${nums}/${uid}/${positionTag}/${excludeRoomId}.json'
+        , sQnTongjiUrl: '/api/public/recommend.click'
+        , sLoadRecommendRoomsCountUrl: '/api/public/recommend.show'
+        , sSendAdminNoticeUrl: '/api/user/superadmincms.gagNotify'
+        , sDoUsePropUrl: ''
+        , sLoadPropListUrl: '/api/user/prop.list'
+        }
+      , oLoginInfo: null
+      , oFlash: {
+          url: '//static.zhanqi.tv/assets/swf/shell.swf'
+        , installUrl: '//static.zhanqi.tv/assets/swf/chunk/v2/expressInstall.swf'
+        , placeholder: 'yp-flash-placeholder'
+        , vars: {}
+        , params: {
+            menu: 'false'
+          , scale: 'noScale'
+          , allowFullscreen: 'true'
+          , allowScriptAccess: 'always'
+          , allowFullScreenInteractive: 'true'
+          , wmode: 'transparent'
+          }
+        , attr: {
+            id: 'BFPlayerID'
+          }
+        , websocket: {
+            ws: 'url'
+          }
+        }
+      , oOtherLogin: {"weibo":"https:\/\/api.weibo.com\/oauth2\/authorize?client_id=273802257&redirect_uri=http%3A%2F%2Fwww.feihuozhibo.com%2Fapi%2Fconnect%2Fweibo&response_type=code&redirect=","qq":"https:\/\/graph.qq.com\/oauth2.0\/authorize?response_type=code&client_id=101049628&redirect_uri=http%3A%2F%2Fwww.zhanqi.tv%2Fapi%2Fconnect%2Fqq&state=&scope=&redirect=","douban":"#","renren":"#"}
+      };
+      window.oYpConfig = {
+        baseUrl: '//static.zhanqi.tv/assets/web/static/'
+      , ver: '20170627.02'
+      , flashVer: '20161009.01'
+      };
+    </script>
+    <!--[if lt IE 8]>
+      <script src="//static.zhanqi.tv/assets/web/static/j/lib/json3.min.js?v=20170627.02"></script>
+    <![endif]-->
+        <script src="//static.zhanqi.tv/assets/web/static/j/yp/lib/require-jquery-min.js?v=20170627.02"></script>
+        <script src="//static.zhanqi.tv/assets/web/static/j/yp/yp-mods-config-min.js?v=20170627.02001"></script>
+    <script data-main-yp="//static.zhanqi.tv/assets/web/static/j/web4.0/zhanqi-min" src="//static.zhanqi.tv/assets/web/static/j/yp/yp-base-min.js?v=20170627.02"></script>
+      </head>
+  <body class="open-left skin-banner">
+    <h1 class="p0">单机游戏视频</h1>
+    <script type="text/javascript">
+      var mediaWinWidth = $(window).width();
+    </script>
+    
+
+    <div class="min-height-set">
+    
+
+
+<!-- 侧边栏区域 -->
+<div class="live-side-content">
+  <!-- 收起侧边栏 -->
+  <div class="live-room-side" id="js-left-panel">
+    <a href="javascript:;" class="unfold js-left-panel-collapse-btn" id="left-click-close" onclick="_hmt.push(['_trackEvent', 'room', 'left_click_close'])"></a>
+    <a href="https://www.zhanqi.tv/" class="logo-area" title="回到首页" rel="nofollow" id="left-side-index-close" onclick="_hmt.push(['_trackEvent', 'room', 'index_close'])"></a>
+    <div class="fn-area">
+      <ul class="menu">
+        <li class="li sy">
+          <a href="https://www.zhanqi.tv/" class="a" title="回到首页" rel="nofollow" id="left-side-index-close" onclick="_hmt.push(['_trackEvent', 'room', 'index_close'])">
+            <i class="fn-icon"></i>
+            <p>首页</p>
+          </a>
+        </li>
+        <li class="li zb">
+          <a href="/lives" class="a" title="" id="left-side-live-close" onclick="_hmt.push(['_trackEvent', 'room', 'live_close'])">
+            <i class="fn-icon"></i>
+            <p>直播</p>
+          </a>
+        </li>
+        <li class="li yx">
+          <a href="/games" class="a" title="" id="left-side-game-close" onclick="_hmt.push(['_trackEvent', 'room', 'game_close'])">            
+            <i class="fn-icon"></i>
+            <p>游戏</p>
+          </a>
+        </li>
+        <li class="li js-follow-nav dy js-hover-item" style="display:none;" data-type="follow">
+          <a href="/user/follow" class="a" target="_blank" title="" id="left-side-follow-close" onclick="_hmt.push(['_trackEvent', 'room', 'follow_close'])">
+            <i class="fn-icon"></i>
+            <p>订阅</p>
+          </a>
+          <!-- 订阅弹窗 -->
+          <div class="sub-dyue-ibox js-left-follow-panel">
+            <!-- 没有订阅 -->
+            <div class="no-dyue-list js-leftside-no-follow" style="display:none;">
+              <i class="no-list-icon"></i>
+              <p class="js-topbar-no-follow-txt">你还未关注任何主播</p>
+            </div>
+            <!-- 没有订阅End -->
+            <!-- 滚动条 -->
+            <div class="js-flow">
+              <ul class="js-panel-list"></ul>
+              <p class="att_loading loading js-leftside-follow-loading textC" style="display: none;">加载中...</p>
+            </div>
+          </div>
+          <!-- 订阅弹窗End -->
+        </li>
+        <li class="li yl">
+          <a href="/games/xindong" class="a" id="left-side-baibian-close" onclick="_hmt.push(['_trackEvent', 'room', 'baibian_close'])" title="">
+            <i class="fn-icon"></i>
+            <p>娱乐</p>
+          </a>
+        </li>
+        <li class="li db">
+          <a href="https://videos.zhanqi.tv" class="a" id="left-side-video-close" onclick="_hmt.push(['_trackEvent', 'room', 'video_close'])" title="">
+            <i class="fn-icon"></i>
+            <p>点播</p>
+          </a>
+        </li>
+        <li class="li yy">
+          <a href="/openpage/2133" class="a" title="" rel="nofollow" id="left-side-webgames-close" onclick="_hmt.push(['_trackEvent', 'room', 'webgames_close'])">
+            <i class="fn-icon"></i>
+            <p>页游</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- 登录区域 -->
+    <div class="login-content js-login-area">
+      <!-- 没登陆 -->
+      <ul class="no-login">
+        <li>
+          <a href="javascript:;" class="js-login-btn">
+            <img src="//static.zhanqi.tv/assets/web/static/images/portrait/portrait6060gray.png" alt="">
+          </a>
+        </li>
+      </ul>
+      <!-- 没登陆End -->
+      <!-- 已经登录 -->
+      <ul class="login">
+        <li class="js-hover-item">
+          <a href="/user/follow" target="_blank" class="login-a">
+            <div class="img-box">
+              <img class="js-user-avatar" src="//static.zhanqi.tv/assets/web/static/images/portrait/portrait6060.png" alt="">
+            </div>
+          </a>
+          <div class="login-ibox-area">
+            <div class="top-area">
+              <a href="javascript:;" class="close js-logout-btn">退出</a>
+              <a href="/user/follow" target="_blank" class="name js-user-nickname"></a>
+            </div>
+            <div class="mid-area">
+              <i class="all-level all-level-0 js-slevel-icon mr10" data-level="0"></i>
+              <i class="user-grade dv">LV<span class="js-my-level-icon">0</span></i>
+              <!-- <div class="bar-area dv">
+                <i class="bar js-left-level-rate" style="width:0;"></i>
+              </div> -->
+            </div>
+            <div class="bottom-area">
+              <a href="javascript:;" class="js-my-room">我的直播间<small></small></a>
+              <a href="/user/inbox" target="_blank">���的私信<div class="tit-area js-msg-count">0</div></a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!-- 已经登录End -->
+    </div>
+    <!-- 登录区域End -->
+  </div>
+  <!-- 收起侧边栏End -->
+
+  <!-- 展开侧边栏 -->
+  <div class="live-room-side-more" id="js-left-panel-more">
+    <a href="javascript:;" class="unfold js-left-panel-collapse-btn" id="left-click-open" onclick="_hmt.push(['_trackEvent', 'room', 'left_click_open'])"></a>
+    <a href="https://www.zhanqi.tv/" class="logo-area" title="回到首页" rel="nofollow" id="left-side-index-close" onclick="_hmt.push(['_trackEvent', 'room', 'index_close'])"></a>
+    <!-- 搜索区域 -->
+    <div class="side-search-area pr js-for-search-association js-for-hot-search" id="js-left-search-panel" style="z-index: 11;">
+      <div class="search-area">
+        <label class="js-search-input-label">搜主播/游戏</label>
+        <input type="text" class="js-search-input" />
+        <i class="searchBtn js-search-btn" title="搜索"></i>
+      </div>
+    </div>
+    <!-- 搜索区域End -->
+    <!-- 滚动条 -->
+    <div>
+      <div class="js-scroll" data-color="#555555">
+        <!-- 频道区域 -->
+        <div class="channel-area">
+          <ul class="clearfix">
+            <li class="zb">
+              <a href="/lives" title="" id="left-side-live-open" onclick="_hmt.push(['_trackEvent', 'room', 'live_open'])">
+                <i class="fn-icon dv"></i>
+                <span class="dv">直播</span>
+              </a>
+            </li>
+            <li class="yx">
+              <a href="/games" title="" id="left-side-game-open" onclick="_hmt.push(['_trackEvent', 'room', 'game_open'])">
+                <i class="fn-icon dv"></i>
+                <span class="dv">分类</span>
+              </a>
+            </li>
+            <li class="db">
+              <a href="https://videos.zhanqi.tv" id="left-side-video-open" onclick="_hmt.push(['_trackEvent', 'room', 'video_open'])" title="">
+                <i class="fn-icon dv"></i>
+                <span class="dv">点播</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- 频道区域End -->
+        <!-- 热门游戏区域 -->
+        
+<!--UT(3):Service\Games::classesList@1-->
+                <div class="side-hot-game">
+                    <div class="hd"><h2>热门竞技</h2></div>
+          <div class="bd">
+            <ul class="clearfix">
+                                          <li class="js-left-side-game-item" data-id="6">
+                <a href="/games/lol#spm=slider.left" title="英雄联盟" id="left-side-game6-open" onclick="_hmt.push(['_trackEvent', 'room', 'game6_open'])">英雄联盟</a>
+              </li>
+                                                        <li class="js-left-side-game-item" data-id="80">
+                <a href="/games/msg2#spm=slider.left" title="梦三国2" id="left-side-game80-open" onclick="_hmt.push(['_trackEvent', 'room', 'game80_open'])">梦三国2</a>
+              </li>
+                                                        <li class="js-left-side-game-item" data-id="10">
+                <a href="/games/dota2#spm=slider.left" title="DOTA2" id="left-side-game10-open" onclick="_hmt.push(['_trackEvent', 'room', 'game10_open'])">DOTA2</a>
+              </li>
+                                                        <li class="js-left-side-game-item" data-id="13">
+                <a href="/games/sanguosha#spm=slider.left" title="三国杀" id="left-side-game13-open" onclick="_hmt.push(['_trackEvent', 'room', 'game13_open'])">三国杀</a>
+              </li>
+                                                        <li class="js-left-side-game-item" data-id="67">
+                <a href="/games/fps#spm=slider.left" title="射击游戏" id="left-side-game67-open" onclick="_hmt.push(['_trackEvent', 'room', 'game67_open'])">射击游戏</a>
+              </li>
+                                                        <li>
+                <a class="all" href="/games?cid=1#spm=slider.left" onclick="_hmt.push(['_trackEvent', 'room', 'game_all_open_1'])">全部&raquo;</a>
+              </li>
+                          </ul>
+          </div>
+                    <div class="hd"><h2>移动游戏</h2></div>
+          <div class="bd">
+            <ul class="clearfix">
+                                          <li class="js-left-side-game-item" data-id="115">
+                <a href="/games/wangzherongyao#spm=slider.left" title="王者荣耀" id="left-side-game115-open" onclick="_hmt.push(['_trackEvent', 'room', 'game115_open'])">王者荣耀</a>
+              </li>
+                                                        <li class="js-left-side-game-item" data-id="143">
+                <a href="/games/jzy#spm=slider.left" title="本月手游玩什么" id="left-side-game143-open" onclick="_hmt.push(['_trackEvent', 'room', 'game143_open'])">本月手游玩什么</a>
+              </li>
+                                                        <li class="js-left-side-game-item" data-id="104">
+                <a href="/games/langrensha#spm=slider.left" title="狼人杀" id="left-side-game104-open" onclick="_hmt.push(['_trackEvent', 'room', 'game104_open'])">狼人杀</a>
+              </li>
+                                                                                                                                                                                                                              </ul>
+          </div>
+                    <div class="hd"><h2>单机主机</h2></div>
+          <div class="bd">
+            <ul class="clearfix">
+                                          <li class="js-left-side-game-item" data-id="154">
+                <a href="/games/baopozu#spm=slider.left" title="爆破组" id="left-side-game154-open" onclick="_hmt.push(['_trackEvent', 'room', 'game154_open'])">爆破组</a>
+              </li>
+                                                        <li class="js-left-side-game-item" data-id="106">
+                <a href="/games/sjts#spm=slider.left" title="伞降逃杀" id="left-side-game106-open" onclick="_hmt.push(['_trackEvent', 'room', 'game106_open'])">伞降逃杀</a>
+              </li>
+                                                        <li class="js-left-side-game-item" data-id="72">
+                <a href="/games/mc#spm=slider.left" title="我的世界" id="left-side-game72-open" onclick="_hmt.push(['_trackEvent', 'room', 'game72_open'])">我的世界</a>
+              </li>
+                                                        <li class="js-left-side-game-item" data-id="122">
+                <a href="/games/shengcunyouxi#spm=slider.left" title="生存游戏" id="left-side-game122-open" onclick="_hmt.push(['_trackEvent', 'room', 'game122_open'])">生存游戏</a>
+              </li>
+                                                        <li class="js-left-side-game-item" data-id="49">
+                <a href="/games/zjyx#spm=slider.left" title="主机游戏" id="left-side-game49-open" onclick="_hmt.push(['_trackEvent', 'room', 'game49_open'])">主机游戏</a>
+              </li>
+                                                      </ul>
+          </div>
+                    <div class="hd"><h2>暴雪游戏</h2></div>
+          <div class="bd">
+            <ul class="clearfix">
+                                          <li class="js-left-side-game-item" data-id="9">
+                <a href="/games/how#spm=slider.left" title="炉石传说" id="left-side-game9-open" onclick="_hmt.push(['_trackEvent', 'room', 'game9_open'])">炉石传说</a>
+              </li>
+                                                        <li class="js-left-side-game-item" data-id="82">
+                <a href="/games/watch#spm=slider.left" title="守望先锋" id="left-side-game82-open" onclick="_hmt.push(['_trackEvent', 'room', 'game82_open'])">守望先锋</a>
+              </li>
+                                                        <li class="js-left-side-game-item" data-id="8">
+                <a href="/games/wow#spm=slider.left" title="魔兽世界" id="left-side-game8-open" onclick="_hmt.push(['_trackEvent', 'room', 'game8_open'])">魔兽世界</a>
+              </li>
+                                                      </ul>
+          </div>
+                    <div class="hd"><h2>战旗娱乐</h2></div>
+          <div class="bd">
+            <ul class="clearfix">
+                                          <li class="js-left-side-game-item" data-id="65">
+                <a href="/games/xindong#spm=slider.left" title="百变娱乐" id="left-side-game65-open" onclick="_hmt.push(['_trackEvent', 'room', 'game65_open'])">百变娱乐</a>
+              </li>
+                                                        <li class="js-left-side-game-item" data-id="45">
+                <a href="/games/Entertainment#spm=slider.left" title="游戏放映室" id="left-side-game45-open" onclick="_hmt.push(['_trackEvent', 'room', 'game45_open'])">游戏放映室</a>
+              </li>
+                                                      </ul>
+          </div>
+                    <div class="hd"><h2>热门游戏</h2></div>
+          <div class="bd">
+            <ul class="clearfix">
+                                          <li class="js-left-side-game-item" data-id="158">
+                <a href="/games/bxjd#spm=slider.left" title="暴雪经典" id="left-side-game158-open" onclick="_hmt.push(['_trackEvent', 'room', 'game158_open'])">暴雪经典</a>
+              </li>
+                                                        <li class="js-left-side-game-item" data-id="35">
+                <a href="/games/chuanqi#spm=slider.left" title="传奇" id="left-side-game35-open" onclick="_hmt.push(['_trackEvent', 'room', 'game35_open'])">传奇</a>
+              </li>
+                                                        <li class="js-left-side-game-item" data-id="22">
+                <a href="/games/dnf#spm=slider.left" title="DNF" id="left-side-game22-open" onclick="_hmt.push(['_trackEvent', 'room', 'game22_open'])">DNF</a>
+              </li>
+                                                        <li class="js-left-side-game-item" data-id="37">
+                <a href="/games/rzcdz#spm=slider.left" title="忍者村大战2" id="left-side-game37-open" onclick="_hmt.push(['_trackEvent', 'room', 'game37_open'])">忍者村大战2</a>
+              </li>
+                                                        <li class="js-left-side-game-item" data-id="33">
+                <a href="/games/300heroes#spm=slider.left" title="300英雄" id="left-side-game33-open" onclick="_hmt.push(['_trackEvent', 'room', 'game33_open'])">300英雄</a>
+              </li>
+                                                        <li class="js-left-side-game-item" data-id="148">
+                <a href="/games/zzwy#spm=slider.left" title="战争网游" id="left-side-game148-open" onclick="_hmt.push(['_trackEvent', 'room', 'game148_open'])">战争网游</a>
+              </li>
+                                                        <li class="js-left-side-game-item" data-id="63">
+                <a href="/games/game#spm=slider.left" title="网游综合" id="left-side-game63-open" onclick="_hmt.push(['_trackEvent', 'room', 'game63_open'])">网游综合</a>
+              </li>
+                                                        <li class="js-left-side-game-item" data-id="76">
+                <a href="/games/qp#spm=slider.left" title="棋牌竞技" id="left-side-game76-open" onclick="_hmt.push(['_trackEvent', 'room', 'game76_open'])">棋牌竞技</a>
+              </li>
+                                                                                                                                                                                                                                                                                        <li>
+                <a class="all" href="/games?cid=5#spm=slider.left" onclick="_hmt.push(['_trackEvent', 'room', 'game_all_open_5'])">全部&raquo;</a>
+              </li>
+                          </ul>
+          </div>
+                  </div>
+                <!-- 热门游戏区域End -->
+      </div>
+    </div>
+    <!-- 登录区域 -->
+    <div class="login-content js-login-area">
+      <!-- 没登陆 -->
+      <div class="no-login">
+        <div class="fn-area">
+          <a href="javascript:;" class="login-fn-btn js-login-btn">登录</a>
+          <a href="javascript:;" class="zc-fn-btn js-regist-btn">注册</a>
+        </div>
+      </div>
+      <!-- 没登陆End -->
+      <!-- 已经登陆 -->
+      <div class="login">
+        <i class="login-arrow"></i>
+        <a href="/user/info" target="_blank" class="a-1">设置</a>
+        <a href="javascript:;" class="a-2 js-logout-btn">退出</a>
+        <a href="/user/follow" target="_blank" class="user-area">
+          <div class="img-box">
+            <img class="js-user-avatar" src="//static.zhanqi.tv/assets/web/static/images/portrait/portrait6060.png" alt="">
+          </div>
+          <div class="info">
+            <p class="name js-user-nickname"></p>
+            <i class="all-level all-level-0 js-slevel-icon mr10" data-level="0"></i>
+            <i class="user-grade dv">LV<span class="js-my-level-icon">0</span></i>
+          </div>
+        </a>
+        <div class="money-area">
+          <div class="money-row money-gold">
+            <i class="gold-ico dv"></i>
+            <span class="num dv js-gold-txt">0</span>
+            <a href="/user/charge?pay_from=room_42844" target="_blank" class="cz-btn dv">充值</a>
+          </div>
+          <div class="money-row money-silver">
+            <i class="silver-ico dv"></i>
+            <span class="num dv js-coin-txt">0</span>
+          </div>
+          <div class="money-row money-zd">
+            <i class="zd-ico dv"></i>
+            <span class="num dv js-bullet-txt">0</span>
+          </div>
+        </div>
+        <div class="fn-area">
+          <a href="/user/follow" target="_blank" class="login-fn-btn">订阅</a>
+          <a href="/user/inbox" target="_blank" class="login-fn-btn">私信<div class="tit-area js-msg-count">0</div></a>
+        </div>
+      </div>
+      <!-- 已经登陆End -->
+      <!-- 按钮区域 -->
+      <div class="fn-btn-area">
+        <div class="side-foot-btn-area">
+          <a href="http://www.12318.gov.cn" target="_blank" class="side-foot-btn">12318举报</a>
+          <a href="http://www.sobot.com/chat/pc/index.html?sysNum=fb175168d36b4614a3b4e2cb25f196ed" target="_blank" class="side-foot-btn-1">联系客服</a>
+          <a href="/anchor/apply/step1?spm=slider.left" target="_blank" class="side-foot-btn js-tobe-anchor" id="left-side-wantlive-open" onclick="_hmt.push(['_trackEvent', 'room', 'wantlive_open'])">我要当主播</a>
+          <a href="javascript:;" class="side-foot-btn js-my-room" style="display: none;" id="left-side-myroom-open" onclick="_hmt.push(['_trackEvent', 'room', 'myroom_open'])">我的直播间</a>
+        </div>
+      </div>
+      <!-- 按钮区域End -->
+    </div>
+    <!-- 登录区域End -->
+
+  </div>
+  <!-- 展开侧边栏End -->
+</div>
+<!-- 侧边栏区域End -->
+
+<script type="text/javascript" src="//static.zhanqi.tv/assets/web/static/j/public/4.0/leftSideAndData.js?v=20170627.02"></script>
+<div class="live-list-page second-list-page tabs js-room-list-tabs" id="js-live-list-panel" data-active="0">
+  
+  <div class="list-title pr">主机游戏</div>
+      
+<!--UT(MD5):13babafc1bed4275fc8f635382f6713c-->
+
+<!--UT(2):Service\Rooms::listsByGameid@1-->
+  
+  
+<!--UT(MD5):d67a102926a935fc176aa66f489150c0-->
+
+<!--UT(2):Service\Ads::getByPosition@1-->
+      <a href="https://www.zhanqi.tv/news/2017/04/26/1524.html" target="_blank" rel="nofollow" title="单机" class="game-banner" onclick="ykarClick(2011,{ uid: oPageConfig.oLoginInfo ? oPageConfig.oLoginInfo.uid : 0, game_id: 49, room_id: 0, position: 'game.ad' });">
+    <img src="https://img2.zhanqi.tv/uploads/2017/04/love-2017042617221507034.jpeg" alt="单机" style="width:100%;height:100%;">
+  </a>
+    
+  
+  <ul class="cutover-nav clearfix">
+        <li class="tab">
+      <a href="javascript:;" class="clearfix">
+        <p class="game-type">全部直播</p>
+      </a>
+    </li>
+        <li class="tab">
+      <a href="javascript:;" class="clearfix">
+        <p class="game-type">怀旧回忆</p>
+      </a>
+    </li>
+        <li class="tab">
+      <a href="javascript:;" class="clearfix">
+        <p class="game-type">格斗游戏</p>
+      </a>
+    </li>
+        <li class="tab">
+      <a href="javascript:;" class="clearfix">
+        <p class="game-type">任天堂</p>
+      </a>
+    </li>
+      </ul>
+    <!-- 全部直播 -->
+  <div class="live-list-tabc tabc js-room-list-tabc" data-type="all" data-size="30" data-url="/api/static/v2.1/game/live/49/${size}/${page}.json" data-cur-page="0">
+        <ul class="clearfix js-room-list-ul" data-width="307"></ul>
+      </div>
+  <!-- 全部直播 end -->
+    <div class="live-list-tabc tabc js-room-list-tabc" data-type="huiyi" data-size="30" data-url="/api/static/v2.1/game/live/73/${size}/${page}.json" data-cur-page="0">
+        <ul class="clearfix js-room-list-ul" data-width="307"></ul>
+      </div>
+    <div class="live-list-tabc tabc js-room-list-tabc" data-type="gdyx" data-size="30" data-url="/api/static/v2.1/game/live/70/${size}/${page}.json" data-cur-page="0">
+        <ul class="clearfix js-room-list-ul" data-width="307"></ul>
+      </div>
+    <div class="live-list-tabc tabc js-room-list-tabc" data-type="maliao" data-size="30" data-url="/api/static/v2.1/game/live/109/${size}/${page}.json" data-cur-page="0">
+        <ul class="clearfix js-room-list-ul" data-width="307"></ul>
+      </div>
+    <div class="list-loading" style="display:none;"><i class="loading"></i></div>
+</div>
+
+    </div>
+    
+
+<script id="dataForamt" class="yp-t-list" data-type-tmpl="0" type="text/tmpl">
+<li data-room-id="${id}" class="${fireworks}">
+  <a href="${url}" class="js-jump-link">
+    <div class="imgBox">
+      <i class="sub-mask"></i>
+      <i class="play-icon"></i>
+      <img src="${bpic}" alt="${title}">
+      ${fireworksHtml}
+      ${positionTypeHtml}
+    </div>
+    <div class="info-area">
+      <span class="name">${title}</span>
+      <div class="meat">
+                <span class="views">
+          <i class="icon-eye dv"></i>
+          <span class="dv">${online}</span>
+        </span>
+                <i class="dv ${gender}"></i>
+        <span class="anchor anchor-to-cut dv">${nickname}</span>
+        <span class="game-name dv">${newGameName}</span>
+      </div>
+    </div>
+  </a>
+</li>
+</script>
+<script>
+  window.gameId = 49;
+  $('.js-left-side-game-item[data-id="49"]').addClass('active');
+</script>
+<script src="//static.zhanqi.tv/assets/web/static/j/lib/jquery.videoHover.js?v=20170627.02"></script>
+<script src="//static.zhanqi.tv/assets/web/static/j/web3.0/gameRoomList.js?v=20170627.0204"></script>
+
+        <script type="text/javascript" src="//static.zhanqi.tv/assets/web/static/j/public/4.0/popLoginRegist-min.js?v=20170627.02"></script>
+        <!--[if lt IE 8]>
+      <script>
+        var bIe7 = true;
+      </script>
+    <![endif]-->
+    <!--[if IE 6]>
+      <script src="//static.zhanqi.tv/assets/web/static/j/lib/DD_belatedPNG.js?v=20170627.02"></script>
+      <script>
+        DD_belatedPNG.fix('.png');
+        var bIe6 = true;
+      </script>
+    <![endif]-->
+    <script type="text/javascript" src="//static.zhanqi.tv/assets/web/static/j/common.js?v=20170627.0201"></script>
+    <!--PageTime:0.023275852203369-->
+      <script>
+    var topHost = document.referrer;
+    if (topHost != null && topHost.indexOf('hanyutai.com') >= 0) {
+      top.location = 'https://www.zhanqi.tv';
+    }
+    if( topHost != null && topHost.indexOf('5913.net') >= 0 ){
+      $('body').html('<h1 style="padding-top: 200px;text-align: center;font-size:18px;">您可能是盗版软件的受害者<br />更多精彩，更多正版，欢迎进入战旗&nbsp;<a style="color:#0372cf;text-decoration: underline;" href="https://www.zhanqi.tv" target="_blank">https://www.zhanqi.tv</a></h1>');
+      $.ajax = function(){};
+    }
+	
+	var _hmt = _hmt || [];
+	(function() {
+      if((window.location.pathname=='/external/cloudIntenet') || (window.location.pathname=='/external/cloudIntenet/baibian'))  {
+      var src = "//hm.baidu.com/hm.js?571a375a2453a30dfb75e7abc6b17ae9";
+       } else {
+	  var src = window != window.parent ? "//hm.baidu.com/hm.js?606469546101f47ff88f66c83792f4d3" : "//hm.baidu.com/hm.js?299cfc89fdba155674e083d478408f29";
+      } 
+	  var hm = document.createElement("script");
+	  hm.src = src;
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+
+    // var _hmt = _hmt || [];
+    (function() {
+    var hm = document.createElement("script");
+      hm.setAttribute('id', 'bf_script_analytics_id');
+      hm.src = "https://tj.zhanqi.tv/analytics.js?_k=5&_v=1.2";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+  })();
+    window.ykarClick = function(){};
+    (function() {
+      var hm = document.createElement("script");
+      hm.setAttribute('id', 'bf_script_ads_id');
+      hm.src = "https://we.dobest.com/common/js/ykar/ykar.js?v=20160719";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    var aaBB = [];
+    $('.js-aa-bb-cc').each(function(i, one){
+      aaBB.push($(one).data('aaBb'));
+    });
+    if( 0 < aaBB.length ){
+      $.ajax({
+        url: 'https://tj.zhanqi.tv/ad.show?roomId=0&ids=' + aaBB.join(',')
+      , type: 'get'
+      , dataType: 'jsonp'
+      });
+    }
+  });
+</script>
+    
+<!--UT(3):Service\SearchHotWords::lists@1-->
+<script type="text/javascript">
+  oPageConfig.aHotSearch = [{"hotWord":"LPL","pcAdWord":"","pcAdUrl":"","iosAdWord":"","iosAdUrl":"","androidAdWord":"","androidAdUrl":""},{"hotWord":"纯黑","pcAdWord":"","pcAdUrl":"","iosAdWord":"","iosAdUrl":"","androidAdWord":"","androidAdUrl":""},{"hotWord":"梦三国","pcAdWord":"","pcAdUrl":"","iosAdWord":"","iosAdUrl":"","androidAdWord":"","androidAdUrl":""},{"hotWord":"文森特","pcAdWord":"","pcAdUrl":"","iosAdWord":"","iosAdUrl":"","androidAdWord":"","androidAdUrl":""},{"hotWord":"DD","pcAdWord":"","pcAdUrl":"","iosAdWord":"","iosAdUrl":"","androidAdWord":"","androidAdUrl":""},{"hotWord":"OTS","pcAdWord":"","pcAdUrl":"","iosAdWord":"","iosAdUrl":"","androidAdWord":"","androidAdUrl":""},{"hotWord":"lyingman","pcAdWord":"","pcAdUrl":"","iosAdWord":"","iosAdUrl":"","androidAdWord":"","androidAdUrl":""},{"hotWord":"EdmundDZhang","pcAdWord":"","pcAdUrl":"","iosAdWord":"","iosAdUrl":"","androidAdWord":"","androidAdUrl":""},{"hotWord":"战旗商城","pcAdWord":"","pcAdUrl":"","iosAdWord":"","iosAdUrl":"","androidAdWord":"","androidAdUrl":""},{"hotWord":"OWPS","pcAdWord":"","pcAdUrl":"","iosAdWord":"","iosAdUrl":"","androidAdWord":"","androidAdUrl":""}];
+</script>
+  </body>
+</html>

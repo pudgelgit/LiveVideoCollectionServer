@@ -1,0 +1,808 @@
+{
+    "lolheroes": [
+        {
+            "name": "亚托克斯",
+            "position": "上单",
+            "alias": ["剑魔","亚托克斯"],
+            "displayName": "剑魔"
+        },
+        {
+            "name": "阿狸",
+            "position": "中单",
+            "alias": ["九尾妖狐","狐狸","阿狸"],
+            "displayName": "狐狸"
+        },
+        {
+            "name": "阿卡丽",
+            "position": "上单",
+            "alias": ["暗影之拳","阿卡丽"],
+            "displayName": "阿卡丽"
+        },
+        {
+            "name": "阿利斯塔",
+            "position": "辅助",
+            "alias": ["牛头酋长","牛头","阿里斯塔"],
+            "displayName": "牛头"
+        },
+        {
+            "name": "阿木木",
+            "position": "野",
+            "alias": ["殇之木乃伊","阿木木"],
+            "displayName": "阿木木"
+        },
+        {
+            "name": "艾尼维亚",
+            "position": "中单",
+            "alias": ["凤凰","冰鸟","艾尼维亚"],
+            "displayName": "冰鸟"
+        },
+        {
+            "name": "安妮",
+            "position": "中单",
+            "alias": ["黑暗之女","火女","安妮"],
+            "displayName": "安妮"
+        },
+        {
+            "name": "艾希",
+            "position": "AD",
+            "alias": ["寒冰","艾希"],
+            "displayName": "寒冰射手"
+        },
+        {
+            "name": "奥瑞利安·索尔",
+            "position": "中单",
+            "alias": ["龙王","索尔"],
+            "displayName": "龙王"
+        },
+        {
+            "name": "阿兹尔",
+            "position": "中单",
+            "alias": ["沙漠皇帝","黄鸡","阿兹尔"],
+            "displayName": "沙漠皇帝"
+        },
+        {
+            "name": "巴德",
+            "position": "辅助",
+            "alias": ["星界游神","巴德"],
+            "displayName": "巴德"
+        },
+        {
+            "name": "布里茨",
+            "position": "辅助",
+            "alias": ["机器人","布里茨"],
+            "displayName": "机器人"
+        },
+        {
+            "name": "布兰德",
+            "position": "中单",
+            "alias": ["复仇焰魂","火男","布兰德"],
+            "displayName": "火男"
+        },
+        {
+            "name": "布隆",
+            "position": "辅助",
+            "alias": ["弗雷尔卓德之心","布隆","防盗门"],
+            "displayName": "布隆"
+        },
+        {
+            "name": "凯特琳",
+            "position": "AD",
+            "alias": ["女警","凯特琳"],
+            "displayName": "女警"
+        },
+        {
+            "name": "卡蜜尔",
+            "position": "上单",
+            "alias": ["青钢影","卡密尔"],
+            "displayName": "青钢影"
+        },
+        {
+            "name": "卡西奥佩娅",
+            "position": "中单",
+            "alias": ["魔蛇之拥","蛇女"],
+            "displayName": "蛇女"
+        },
+        {
+            "name": "科加斯",
+            "position": "中单",
+            "alias": ["虚空恐惧","虫子","科加斯"],
+            "displayName": "虫子"
+        },
+        {
+            "name": "库奇",
+            "position": "AD",
+            "alias": ["英勇投弹手","飞机","库奇"],
+            "displayName": "飞机"
+        },
+        {
+            "name": "德莱厄斯",
+            "position": "上单",
+            "alias": ["诺克萨斯之手","诺手","诺克"],
+            "displayName": "诺手"
+        },
+        {
+            "name": "黛安娜",
+            "position": "中单",
+            "alias": ["皎月","戴安娜"],
+            "displayName": "皎月"
+        },
+        {
+            "name": "德莱文",
+            "position": "AD",
+            "alias": ["荣耀行刑官","德莱文"],
+            "displayName": "德莱文"
+        },
+        {
+            "name": "蒙多医生",
+            "position": "上单",
+            "alias": ["祖安狂人","蒙多"],
+            "displayName": "蒙多"
+        },
+        {
+            "name": "艾克",
+            "position": "上单",
+            "alias": ["时间刺客","艾克"],
+            "displayName": "艾克"
+        },
+        {
+            "name": "伊莉丝",
+            "position": "野",
+            "alias": ["蜘蛛","伊莉丝"],
+            "displayName": "蜘蛛"
+        },
+        {
+            "name": "伊芙琳",
+            "position": "野",
+            "alias": ["寡妇","伊芙琳"],
+            "displayName": "寡妇"
+        },
+        {
+            "name": "伊泽瑞尔",
+            "position": "AD",
+            "alias": ["探险家","EZ","伊泽瑞尔"],
+            "displayName": "EZ"
+        },
+        {
+            "name": "费德提克",
+            "position": "野",
+            "alias": ["末日","草人","费德提克"],
+            "displayName": "稻草人"
+        },
+        {
+            "name": "菲奥娜",
+            "position": "上单",
+            "alias": ["剑姬","菲奥娜"],
+            "displayName": "剑姬"
+        },
+        {
+            "name": "菲兹",
+            "position": "中单",
+            "alias": ["潮汐海灵","小鱼","菲兹"],
+            "displayName": "小鱼人"
+        },
+        {
+            "name": "加里奥",
+            "position": "中单",
+            "alias": ["加里奥","哨兵之殇"],
+            "displayName": "加里奥"
+        },
+        {
+            "name": "普朗克",
+            "position": "上单",
+            "alias": ["海洋之灾","船长"],
+            "displayName": "船长"
+        },
+        {
+            "name": "盖伦",
+            "position": "上单",
+            "alias": ["德玛西亚之力","盖伦"],
+            "displayName": "盖伦"
+        },
+        {
+            "name": "纳尔",
+            "position": "上单",
+            "alias": ["迷失之牙","纳尔"],
+            "displayName": "纳尔"
+        },
+        {
+            "name": "古拉加斯",
+            "position": "野",
+            "alias": ["酒桶","古拉加斯"],
+            "displayName": "酒桶"
+        },
+        {
+            "name": "格雷福斯",
+            "position": "野",
+            "alias": ["法外狂徒","男枪","格雷福斯"],
+            "displayName": "男枪"
+        },
+        {
+            "name": "赫卡里姆",
+            "position": "野",
+            "alias": ["战争之影","人马"],
+            "displayName": "人马"
+        },
+        {
+            "name": "黑默丁格",
+            "position": "中单",
+            "alias": ["大发明家","大头","黑默丁格"],
+            "displayName": "大头"
+        },
+        {
+            "name": "俄洛伊",
+            "position": "上单",
+            "alias": ["海兽祭司","俄洛伊"],
+            "displayName": "海兽祭祀"
+        },
+        {
+            "name": "艾瑞莉娅",
+            "position": "上单",
+            "alias": ["刀锋意志","女刀","艾瑞莉娅"],
+            "displayName": "刀锋意志"
+        },
+        {
+            "name": "艾翁",
+            "position": "野",
+            "alias": ["翠神","艾翁"],
+            "displayName": "翠神"
+        },
+        {
+            "name": "迦娜",
+            "position": "辅助",
+            "alias": ["风暴之怒","风女"],
+            "displayName": "风女"
+        },
+        {
+            "name": "嘉文四世",
+            "position": "上单",
+            "alias": ["皇子","嘉文"],
+            "displayName": "皇子"
+        },
+        {
+            "name": "贾克斯",
+            "position": "上单",
+            "alias": ["武器","贾克"],
+            "displayName": "武器大师"
+        },
+        {
+            "name": "杰斯",
+            "position": "上单",
+            "alias": ["未来守护者","杰斯"],
+            "displayName": "杰斯"
+        },
+        {
+            "name": "烬",
+            "position": "AD",
+            "alias": ["戏命师","烬"],
+            "displayName": "烬"
+        },
+        {
+            "name": "金克丝",
+            "position": "AD",
+            "alias": ["暴走萝莉","金克丝","金克斯"],
+            "displayName": "金克斯"
+        },
+        {
+            "name": "卡莉丝塔",
+            "position": "AD",
+            "alias": ["复仇","滑板鞋","卡莉丝塔"],
+            "displayName": "复仇之矛"
+        },
+        {
+            "name": "卡尔玛",
+            "position": "辅助",
+            "alias": ["天启者","卡尔玛"],
+            "displayName": "卡尔玛"
+        },
+        {
+            "name": "卡尔萨斯",
+            "position": "中单",
+            "alias": ["死亡颂唱者","死哥","卡尔萨斯"],
+            "displayName": "死亡颂唱着"
+        },
+        {
+            "name": "卡萨丁",
+            "position": "中单",
+            "alias": ["虚空行者","卡萨丁"],
+            "displayName": "卡萨丁"
+        },
+        {
+            "name": "卡特琳娜",
+            "position": "中单",
+            "alias": ["不祥之刃","卡特"],
+            "displayName": "卡特"
+        },
+        {
+            "name": "凯尔",
+            "position": "中单",
+            "alias": ["天使","凯尔"],
+            "displayName": "天使"
+        },
+        {
+            "name": "凯南",
+            "position": "上单",
+            "alias": ["狂暴之心","凯南"],
+            "displayName": "凯南"
+        },
+        {
+            "name": "卡兹克",
+            "position": "野",
+            "alias": ["虚空掠夺者","螳螂","喜之郎","卡兹克"],
+            "displayName": "螳螂"
+        },
+        {
+            "name": "千珏",
+            "position": "野",
+            "alias": ["永猎双子","千珏"],
+            "displayName": "千珏"
+        },
+        {
+            "name": "克烈",
+            "position": "上单",
+            "alias": ["暴怒骑士","克烈"],
+            "displayName": "克烈"
+        },
+        {
+            "name": "克格莫",
+            "position": "AD",
+            "alias": ["深渊巨口","大嘴"],
+            "displayName": "大嘴"
+        },
+        {
+            "name": "乐芙兰",
+            "position": "中单",
+            "alias": ["妖姬","乐芙兰"],
+            "displayName": "妖姬"
+        },
+        {
+            "name": "李青",
+            "position": "野",
+            "alias": ["盲僧","瞎子","李青","僧"],
+            "displayName": "盲僧"
+        },
+        {
+            "name": "蕾欧娜",
+            "position": "辅助",
+            "alias": ["曙光女神","日女","蕾欧娜"],
+            "displayName": "曙光女神"
+        },
+        {
+            "name": "丽桑卓",
+            "position": "中单",
+            "alias": ["冰霜女巫","冰女","丽桑卓"],
+            "displayName": "丽桑卓"
+        },
+        {
+            "name": "卢锡安",
+            "position": "AD",
+            "alias": ["圣枪游侠","奥巴","卢锡安"],
+            "displayName": "卢锡安"
+        },
+        {
+            "name": "璐璐",
+            "position": "辅助",
+            "alias": ["仙灵女巫","露露"],
+            "displayName": "璐璐"
+        },
+        {
+            "name": "拉克丝",
+            "position": "中单",
+            "alias": ["光辉","拉克丝"],
+            "displayName": "拉克丝"
+        },
+        {
+            "name": "墨菲特",
+            "position": "上单",
+            "alias": ["熔岩巨兽","石头","墨菲特"],
+            "displayName": "石头人"
+        },
+        {
+            "name": "玛尔扎哈",
+            "position": "中单",
+            "alias": ["虚空先知","蚂蚱","马尔扎哈"],
+            "displayName": "马尔扎哈"
+        },
+        {
+            "name": "茂凯",
+            "position": "上单",
+            "alias": ["扭曲树精","大树","茂凯"],
+            "displayName": "大树"
+        },
+        {
+            "name": "易",
+            "position": "野",
+            "alias": ["剑圣","易"],
+            "displayName": "剑圣"
+        },
+        {
+            "name": "厄运小姐",
+            "position": "AD",
+            "alias": ["赏金猎人","女枪","厄运小姐"],
+            "displayName": "赏金猎人"
+        },
+        {
+            "name": "孙悟空",
+            "position": "上单",
+            "alias": ["齐天大圣","猴","孙悟空"],
+            "displayName": "猴子"
+        },
+        {
+            "name": "莫德凯撒",
+            "position": "中单",
+            "alias": ["铁铠冥魂","铁男","金属","莫德凯撒"],
+            "displayName": "金属大师"
+        },
+        {
+            "name": "莫甘娜",
+            "position": "辅助",
+            "alias": ["堕落天使","莫甘娜"],
+            "displayName": "莫甘娜"
+        },
+        {
+            "name": "娜美",
+            "position": "辅助",
+            "alias": ["唤潮鲛姬","娜美"],
+            "displayName": "娜美"
+        },
+        {
+            "name": "内瑟斯",
+            "position": "上单",
+            "alias": ["沙漠死神,狗头","内瑟斯"],
+            "displayName": "狗头"
+        },
+        {
+            "name": "诺提勒斯",
+            "position": "上单",
+            "alias": ["泰坦","诺提勒斯"],
+            "displayName": "泰坦"
+        },
+        {
+            "name": "奈德丽",
+            "position": "野",
+            "alias": ["狂野女猎手","豹女","奶大力","奈德丽"],
+            "displayName": "豹女"
+        },
+        {
+            "name": "魔腾",
+            "position": "野",
+            "alias": ["梦靥","NOC","魔腾"],
+            "displayName": "梦靥"
+        },
+        {
+            "name": "努努",
+            "position": "野",
+            "alias": ["雪人","努努"],
+            "displayName": "雪人"
+        },
+        {
+            "name": "奥拉夫",
+            "position": "上单",
+            "alias": ["狂战士","奥拉夫"],
+            "displayName": "奥拉夫"
+        },
+        {
+            "name": "奥莉安娜",
+            "position": "中单",
+            "alias": ["发条","奥利安娜"],
+            "displayName": "发条"
+        },
+        {
+            "name": "潘森",
+            "position": "上单",
+            "alias": ["战争之王","潘森"],
+            "displayName": "潘森"
+        },
+        {
+            "name": "波比",
+            "position": "上单",
+            "alias": ["圣锤之毅","波比"],
+            "displayName": "波比"
+        },
+        {
+            "name": "奎因",
+            "position": "上单",
+            "alias": ["德玛西亚之翼","奎因"],
+            "displayName": "奎因"
+        },
+        {
+            "name": "拉莫斯",
+            "position": "野",
+            "alias": ["龙龟","拉莫斯"],
+            "displayName": "龙龟"
+        },
+        {
+            "name": "雷克塞",
+            "position": "野",
+            "alias": ["虚空遁地兽","雷克赛"],
+            "displayName": "雷克赛"
+        },
+        {
+            "name": "雷克顿",
+            "position": "上单",
+            "alias": ["荒漠屠夫","鳄鱼","雷克顿"],
+            "displayName": "鳄鱼"
+        },
+        {
+            "name": "雷恩加尔",
+            "position": "野",
+            "alias": ["傲之追猎者","狮子","雷恩加尔"],
+            "displayName": "狮子狗"
+        },
+        {
+            "name": "锐雯",
+            "position": "上单",
+            "alias": ["放逐之刃","花木兰","瑞文","瑞雯","锐文","锐雯"],
+            "displayName": "锐雯"
+        },
+        {
+            "name": "兰博",
+            "position": "上单",
+            "alias": ["机械公敌","兰博"],
+            "displayName": "兰博"
+        },
+        {
+            "name": "瑞兹",
+            "position": "中单",
+            "alias": ["瑞兹"],
+            "displayName": "瑞兹"
+        },
+        {
+            "name": "瑟庄妮",
+            "position": "野",
+            "alias": ["凛冬之怒","猪女","瑟庄妮"],
+            "displayName": "猪女"
+        },
+        {
+            "name": "萨科",
+            "position": "野",
+            "alias": ["小丑","萨科"],
+            "displayName": "小丑"
+        },
+        {
+            "name": "慎",
+            "position": "上单",
+            "alias": ["暮光之眼","慎"],
+            "displayName": "慎"
+        },
+        {
+            "name": "希瓦娜",
+            "position": "野",
+            "alias": ["龙血武姬","龙女","希瓦娜"],
+            "displayName": "龙女"
+        },
+        {
+            "name": "辛吉德",
+            "position": "上单",
+            "alias": ["炼金","辛吉德"],
+            "displayName": "炼金"
+        },
+        {
+            "name": "赛恩",
+            "position": "上单",
+            "alias": ["亡灵战神","塞恩"],
+            "displayName": "塞恩"
+        },
+        {
+            "name": "希维尔",
+            "position": "AD",
+            "alias": ["战争女神","希维尔"],
+            "displayName": "希维尔"
+        },
+        {
+            "name": "斯卡纳",
+            "position": "野",
+            "alias": ["水晶先锋","蝎子"],
+            "displayName": "蝎子"
+        },
+        {
+            "name": "娑娜",
+            "position": "辅助",
+            "alias": ["琴瑟仙女","琴女","娑娜"],
+            "displayName": "琴女"
+        },
+        {
+            "name": "索拉卡",
+            "position": "辅助",
+            "alias": ["众星之子","奶妈","索拉卡"],
+            "displayName": "奶妈"
+        },
+        {
+            "name": "斯维因",
+            "position": "中单",
+            "alias": ["策士统领","乌鸦","斯维因"],
+            "displayName": "乌鸦"
+        },
+        {
+            "name": "辛德拉",
+            "position": "中单",
+            "alias": ["暗黑元首","球女","辛德拉"],
+            "displayName": "暗黑元首"
+        },
+        {
+            "name": "塔姆",
+            "position": "辅助",
+            "alias": ["河流之王","蛤蟆","塔姆"],
+            "displayName": "塔姆"
+        },
+        {
+            "name": "塔莉垭",
+            "position": "中单",
+            "alias": ["岩雀","塔利亚","塔莉垭"],
+            "displayName": "岩雀"
+        },
+        {
+            "name": "泰隆",
+            "position": "中单",
+            "alias": ["刀锋之影","男刀","泰隆"],
+            "displayName": "泰隆"
+        },
+        {
+            "name": "塔里克",
+            "position": "辅助",
+            "alias": ["瓦洛兰之盾","宝石","塔里克"],
+            "displayName": "塔里克"
+        },
+        {
+            "name": "提莫",
+            "position": "上单",
+            "alias": ["迅捷斥候","提莫"],
+            "displayName": "提莫"
+        },
+        {
+            "name": "锤石",
+            "position": "辅助",
+            "alias": ["魂锁典狱长","锤石"],
+            "displayName": "锤石"
+        },
+        {
+            "name": "崔丝塔娜",
+            "position": "AD",
+            "alias": ["麦林炮手","小炮","炮娘","崔丝塔娜"],
+            "displayName": "麦林炮手"
+        },
+        {
+            "name": "特朗德尔",
+            "position": "上单",
+            "alias": ["巨魔","特朗德尔"],
+            "displayName": "巨魔"
+        },
+        {
+            "name": "泰达米尔",
+            "position": "上单",
+            "alias": ["蛮族之王","蛮王","泰达米尔"],
+            "displayName": "蛮王"
+        },
+        {
+            "name": "崔斯特",
+            "position": "中单",
+            "alias": ["卡牌","崔斯特"],
+            "displayName": "卡牌大师"
+        },
+        {
+            "name": "图奇",
+            "position": "AD",
+            "alias": ["瘟疫之源","老鼠","图奇"],
+            "displayName": "老鼠"
+        },
+        {
+            "name": "乌迪尔",
+            "position": "野",
+            "alias": ["兽灵行者","乌迪尔"],
+            "displayName": "乌迪尔"
+        },
+        {
+            "name": "厄加特",
+            "position": "AD",
+            "alias": ["首领之傲","螃蟹","厄加特"],
+            "displayName": "螃蟹"
+        },
+        {
+            "name": "韦鲁斯",
+            "position": "中单",
+            "alias": ["惩戒之箭","维鲁斯"],
+            "displayName": "维鲁斯"
+        },
+        {
+            "name": "薇恩",
+            "position": "AD",
+            "alias": ["暗夜猎手","VN","维恩","薇恩"],
+            "displayName": "维恩"
+        },
+        {
+            "name": "维迦",
+            "position": "中单",
+            "alias": ["小法","维迦"],
+            "displayName": "小法师"
+        },
+        {
+            "name": "维克兹",
+            "position": "辅助",
+            "alias": ["虚空之眼","马眼","维克兹"],
+            "displayName": "虚空之眼"
+        },
+        {
+            "name": "蔚",
+            "position": "野",
+            "alias": ["皮城执法官","蔚"],
+            "displayName": "蔚"
+        },
+        {
+            "name": "维克托",
+            "position": "中单",
+            "alias": ["机械先驱","三只手","维克多","维克托"],
+            "displayName": "维克托"
+        },
+        {
+            "name": "弗拉基米尔",
+            "position": "中单",
+            "alias": ["猩红收割者","吸血鬼","弗拉基米尔"],
+            "displayName": "吸血鬼"
+        },
+        {
+            "name": "沃利贝尔",
+            "position": "野",
+            "alias": ["雷霆咆哮","狗熊","沃利贝尔"],
+            "displayName": "狗熊"
+        },
+        {
+            "name": "沃里克",
+            "position": "野",
+            "alias": ["祖安怒兽","狼人","沃里克"],
+            "displayName": "狼人"
+        },
+        {
+            "name": "泽拉斯",
+            "position": "中单",
+            "alias": ["远古巫灵","泽拉斯"],
+            "displayName": "泽拉斯"
+        },
+        {
+            "name": "赵信",
+            "position": "野",
+            "alias": ["德邦","信爷","赵信"],
+            "displayName": "赵信"
+        },
+        {
+            "name": "亚索",
+            "position": "中单",
+            "alias": ["剑豪","托人索","托儿所","亚索"],
+            "displayName": "亚索"
+        },
+        {
+            "name": "约里克",
+            "position": "上单",
+            "alias": ["牧魂人","掘墓","约里克"],
+            "displayName": "约里克"
+        },
+        {
+            "name": "扎克",
+            "position": "野",
+            "alias": ["生化魔人","翔","扎克"],
+            "displayName": "扎克"
+        },
+        {
+            "name": "劫",
+            "position": "中单",
+            "alias": ["影流之主","火影","劫"],
+            "displayName": "劫"
+        },
+        {
+            "name": "吉格斯",
+            "position": "中单",
+            "alias": ["爆破鬼才","炸弹人","吉格斯"],
+            "displayName": "炸弹人"
+        },
+        {
+            "name": "基兰",
+            "position": "中单",
+            "alias": ["时光","基兰"],
+            "displayName": "时光"
+        },
+        {
+            "name": "婕拉",
+            "position": "辅助",
+            "alias": ["荆棘","花女","婕拉"],
+            "displayName": "婕拉"
+        }
+    ]
+}
