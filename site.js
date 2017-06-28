@@ -28,7 +28,6 @@ class Site {
                 for (var j in cates){
                     promises.push(this.promiseGetRecommend(this.recommendPrefix + this.recommendCates[cateName][j], cateName,this.siteName, i*500,this.request));
                 }
-
                 i++;
             }
         }
@@ -38,6 +37,10 @@ class Site {
                 if (values[j] != null && values[j] != undefined) {
                     self.recommendData = self.recommendData.concat(values[j]);
                 }
+            }
+            for (var i in self.recommendData){
+                var room = self.recommendData[i];
+                self.makeupRoomInfo(room);
             }
             callback(self.recommendData);
         });
@@ -128,6 +131,23 @@ class Site {
             if (room.hero == null && hero != null) {
                 room.hero = hero.displayName;
             }
+        }else if(room.cate == cate.liveCates.wzry){
+            let roomCate = cate.wzry;
+            room.position = roomCate.positionMatch(room.roomName);
+            if (room.position == null) {
+                room.position = roomCate.positionMatch(room.anchorName);
+            }
+            //通过标题的包含的英雄别名或者英雄名来定位
+            let hero = roomCate.heroMatch(room.roomName);
+            if (hero == null) {
+                hero = roomCate.heroMatch(room.anchorName);
+            }
+            if (room.position == null && hero != null) {
+                room.position = hero.position;
+            }
+            if (room.hero == null && hero != null) {
+                room.hero = hero.displayName;
+            }
         }
     }
 }
@@ -143,12 +163,11 @@ class Douyu extends Site{
             var anchorItem = {};
             anchorItem.roomName = a.attr('title');
             var id = a.attr('data-rid');
-            var link = host+"/"+id;
-            var temp = url.parse(link);
+            var link = a.attr('href');
+            let temp = url.parse(link);
             if (temp.host == null) {
                 temp.protocol = 'https:';
                 temp.host = host;
-                temp.hostname = host;
                 link = url.format(temp);
             }
             anchorItem.address = link;
@@ -160,7 +179,6 @@ class Douyu extends Site{
             anchorItem.hero = null;
             anchorItem.tags = null;
             anchorItem.appAddress = "douyutv://"+id+"&undefined";
-            self.makeupRoomInfo(anchorItem);
             recommendData.push(anchorItem);
         });
         return recommendData;
@@ -182,9 +200,8 @@ class Panda extends Site{
             let id = a.attr("data-id");
             let temp = url.parse(link);
             if (temp.host == null) {
-                temp.protocol = 'http:';
+                temp.protocol = 'https:';
                 temp.host = host;
-                temp.hostname = host;
                 link = url.format(temp);
             }
             anchorItem.address = link;
@@ -201,7 +218,6 @@ class Panda extends Site{
             anchorItem.hero = null;
             anchorItem.tags = null;
             anchorItem.appAddress = "https://m.gate.panda.tv/openroom/"+id;
-            self.makeupRoomInfo(anchorItem);
             recommendData.push(anchorItem);
         });
         return recommendData;
@@ -209,38 +225,7 @@ class Panda extends Site{
 }
 
 class Zhanqi extends Site{
-    // parseRecommendHtml(htmlContent,cate){
-    //     let recommendData = [];
-    //     let $ = cheerio.load(htmlContent);
-    //     let host = 'www.zhanqi.tv';
-    //     let lis = $("ul.clearfix.js-room-list-ul li");
-    //     var self = this;
-    //     lis.each(function (i, elem) {
-    //         let a = $(this);
-    //         let anchorItem = {};
-    //         anchorItem.roomName = a.find('span.name').text();
-    //         let link = a.find('a.js-jump-link').attr('href');
-    //         let temp = url.parse(link);
-    //         if (temp.host == null) {
-    //             temp.protocol = 'https:';
-    //             temp.host = host;
-    //             temp.hostname = host;
-    //             link = url.format(temp);
-    //         }
-    //         anchorItem.address = link;
-    //         anchorItem.anchorName = a.find('span.anchor.anchor-to-cut.dv').text();
-    //         anchorItem.viewNum = a.find('span.views span.dv').text();
-    //         anchorItem.siteName = self.siteName;
-    //         anchorItem.cate = cate;
-    //         anchorItem.position = null;
-    //         anchorItem.hero = null;
-    //         anchorItem.tags = null;
-    //         self.makeupRoomInfo(anchorItem);
-    //         console.log("l in zhanqi :"+recommendData.length);
-    //         recommendData.push(anchorItem);
-    //     });
-    //     return recommendData;
-    // }
+
     parseRecommendHtml(htmlContent,cate){
         let host = "www.zhanqi.tv";
         let recommendData = [];
@@ -254,11 +239,11 @@ class Zhanqi extends Site{
                 let anchorItem = {};
                 anchorItem.roomName = room["title"];
                 let link = room["code"];
+
                         let temp = url.parse(link);
                         if (temp.host == null) {
                             temp.protocol = 'https:';
                             temp.host = host;
-                            temp.hostname = host;
                             link = url.format(temp);
                         }
                 anchorItem.address = link;
@@ -271,9 +256,7 @@ class Zhanqi extends Site{
                 anchorItem.tags = null;
                 let id = room["id"];
                 let subID = room["uid"];
-                anchorItem.appAddress = "https://secstatic.yy.com/huya/?sid="+id+"&subsid="+subID+"&screenType=0&liveSourceType=0";
-
-                self.makeupRoomInfo(anchorItem);
+                // anchorItem.appAddress = "https://m.zhanqi.tv/app.php?roomid="+room["code"];
                 recommendData.push(anchorItem);
             }
         }
@@ -297,7 +280,6 @@ class Huya extends Site{
             if (temp.host == null) {
                 temp.protocol = 'http:';
                 temp.host = host;
-                temp.hostname = host;
                 link = url.format(temp);
             }
             anchorItem.address = link;
@@ -309,12 +291,10 @@ class Huya extends Site{
             anchorItem.hero = null;
             anchorItem.tags = null;
             anchorItem.appAddress = null;
-            self.makeupRoomInfo(anchorItem);
             recommendData.push(anchorItem);
         });
         return recommendData;
     }
-
 }
 
 const sites = siteConferenceData.sites;

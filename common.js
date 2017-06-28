@@ -25,7 +25,7 @@ function sqlToDB(sql, callback) {
         if (err)
             handleError(err, 'sqlToDB');
         // console.log('查询结果为:', rows);
-        console.log('success');
+        console.log('query success');
         if (callback) {
             callback(rows);
         }
@@ -43,12 +43,9 @@ function objectArrayToSQLValues(object, columns) {
         }
         values += mysql.escape(object[i][columns[columns.length - 1]]);
         values += '),';
-        if(i == 6){
-            console.log(object[i]);
-        }
     }
     values = values.substr(0, values.length - 1);
-    console.log(values.substring(0,300));
+    // console.log(values.substring(0,1000));
     return values;
 }
 
@@ -59,7 +56,6 @@ function saveToFile(content,fileName) {
         if(err) {
             return console.log(err);
         }
-        console.log("The file was saved!");
     });
 }
 exports.heroList = [];
@@ -85,4 +81,5 @@ const pool  = mysql.createPool({
     database: exports.databaseName,
     multipleStatements: true
 });
+exports.pool = pool;
 

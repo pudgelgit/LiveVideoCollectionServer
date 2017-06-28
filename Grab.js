@@ -7,7 +7,7 @@ const https = require('https');
 const promise = require('promise');
 const timer = require('timers');
 const common = require("./common");
-const grabInterval = 10000;
+const grabInterval = 100000;
 const site = require("./site");
 timer.setImmediate(function () {
     grabFamousAnchors();
@@ -49,7 +49,6 @@ function recommend() {
                 }
                 return viewNumb-viewNuma;
             });
-            console.log('will write');
             writeRecommendDataToDb(recommendData);
         }
         recommendData = null;
@@ -67,38 +66,24 @@ function recommend() {
     }
 }
 
-//根据字符匹配相应的英雄
-function heroMatch(title) {
-    for (let i = 0; i < common.heroList.length; i++) {
-        let hero = common.heroList[i];
-        let heroNames = hero.alias;
-        heroNames.push(hero.name);
-        for (let j = 0; j < heroNames.length; j++) {
-            let name = heroNames[j];
-            let index = title.indexOf(name);
-            if (index > -1) {
-                return hero;
-            }
-        }
-    }
-    return null;
-}
 //抓取星主播
 function grabFamousAnchors() {
     let sql = 'select * from ' + common.famousAnchorsTableName;
     common.sqlToDB(sql, rows => {
-        for (let i = 0; i < rows.length; i++) {
-            let row = rows[i];
-            let anchor = {
-                anchorName: row.anchorName,
-                tags: row.tags,
-                site: row.site,
-                cate: row.cate,
-                roomID: row.roomID,
-                position: row.position,
-                hero: row.hero
-            };
-            common.famousAnchors.push(anchor);
+        if (rows != undefined) {
+            for (let i = 0; i < rows.length; i++) {
+                let row = rows[i];
+                let anchor = {
+                    anchorName: row.anchorName,
+                    tags: row.tags,
+                    site: row.site,
+                    cate: row.cate,
+                    roomID: row.roomID,
+                    position: row.position,
+                    hero: row.hero
+                };
+                common.famousAnchors.push(anchor);
+            }
         }
     });
 }

@@ -17,16 +17,8 @@ http.createServer(function(request, response) {
         body.push(chunk);
     }).on('end', function() {
         if (url == '/recommend'){
-            var connection = mysql.createConnection({
-                host: common.host,
-                user: common.user,
-                password: common.password,
-                database: common.databaseName,
-                multipleStatements: true
-            });
-            connection.connect();
             var sql = 'select * from '+common.recommendTableName ;
-            connection.query(sql,function(err, rows, fields) {
+            common.pool.query(sql,function(err, rows, fields) {
                 if (err) throw common.handleError(err,'query recommend anchors');
                 // console.log('查询结果为:', rows);
                 response.statusCode = 200;
@@ -35,7 +27,6 @@ http.createServer(function(request, response) {
                 response.write(JSON.stringify({'recommendAnchors':rows}));
                 response.end();
             });
-            connection.end();
         }else{
             // BEGINNING OF NEW STUFF
             response.on('error', function(err) {

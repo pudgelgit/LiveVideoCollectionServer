@@ -1,0 +1,530 @@
+[
+  {
+    "name": "干将莫邪",
+    "alias": [
+      "干将","莫邪"
+    ],
+    "displayName": "干将莫邪",
+    "position": "法师"
+  },
+  {
+    "name": "东皇太一",
+    "alias": [
+      "东皇","太一"
+    ],
+    "displayName": "东皇太一",
+    "posiition": "坦克"
+  },
+  {
+    "name": "大乔",
+    "alias": [
+      "大乔"
+    ],
+    "displayName": "大乔",
+    "position": "辅助"
+  },
+  {
+    "name": "黄忠",
+    "alias": [
+      "黄忠"
+    ],
+    "displayName": "黄忠",
+    "position": "射手"
+  },
+  {
+    "name": "诸葛亮",
+    "alias": [
+      "诸葛"
+    ],
+    "displayName": "诸葛亮",
+    "position": "法师"
+  },
+  {
+    "name": "哪吒",
+    "alias": [
+      "哪吒"
+    ],
+    "displayName": "哪吒",
+    "position": "战士"
+  },
+  {
+    "name": "太乙真人",
+    "alias": [
+      "太乙真人"
+    ],
+    "displayName": "太乙真人",
+    "position": "辅助"
+  },
+  {
+    "name": "杨戬",
+    "alias": [
+      "杨戬"
+    ],
+    "displayName": "杨戬",
+    "position": "战士"
+  },
+  {
+    "name": "成吉思汗",
+    "alias": [
+      "成吉思汗"
+    ],
+    "displayName": "成吉思汗",
+    "position": "射手"
+  },
+  {
+    "name": "橘右京",
+    "alias": [
+      "橘右京"
+    ],
+    "displayName": "橘右京",
+    "position": "战士"
+  },
+  {
+    "name": "马可波罗",
+    "alias": [
+      "马可波罗"
+    ],
+    "displayName": "马可波罗",
+    "position": "射手"
+  },
+  {
+    "name": "雅典娜",
+    "alias": [
+      "雅典娜"
+    ],
+    "displayName": "雅典娜",
+    "position": "战士"
+  },
+  {
+    "name": "夏侯惇",
+    "alias": [
+      "夏侯惇"
+    ],
+    "displayName": "夏侯惇",
+    "position": "战士"
+  },
+  {
+    "name": "蔡文姬",
+    "alias": [
+      "蔡文姬"
+    ],
+    "displayName": "蔡文姬",
+    "position": "辅助"
+  },
+  {
+    "name": "关羽",
+    "alias": [
+      "关羽"
+    ],
+    "displayName": "关羽",
+    "position": "战士"
+  },
+  {
+    "name": "虞姬",
+    "alias": [
+      "虞姬"
+    ],
+    "displayName": "虞姬",
+    "position": "射手"
+  },
+  {
+    "name": "安琪拉",
+    "alias": [
+      "安琪拉"
+    ],
+    "displayName": "安琪拉",
+    "position": "法师"
+  },
+  {
+    "name": "项羽",
+    "alias": [
+      "项羽"
+    ],
+    "displayName": "项羽",
+    "posiition": "坦克"
+  },
+  {
+    "name": "后羿",
+    "alias": [
+      "后羿"
+    ],
+    "displayName": "后羿",
+    "position": "射手"
+  },
+  {
+    "name": "刘禅",
+    "alias": [
+      "刘禅"
+    ],
+    "displayName": "刘禅",
+    "posiition": "坦克"
+  },
+  {
+    "name": "王昭君",
+    "alias": [
+      "王昭君"
+    ],
+    "displayName": "王昭君",
+    "position": "法师"
+  },
+  {
+    "name": "赵云",
+    "alias": [
+      "赵云"
+    ],
+    "displayName": "赵云",
+    "position": "战士"
+  },
+  {
+    "name": "花木兰",
+    "alias": [
+      "花木兰"
+    ],
+    "displayName": "花木兰",
+    "position": "战士"
+  },
+  {
+    "name": "狄仁杰",
+    "alias": [
+      "狄仁杰"
+    ],
+    "displayName": "狄仁杰",
+    "position": "射手"
+  },
+  {
+    "name": "韩信",
+    "alias": [
+      "韩信"
+    ],
+    "displayName": "韩信",
+    "position": "刺客"
+  },
+  {
+    "name": "墨子",
+    "alias": [
+      "墨子"
+    ],
+    "displayName": "墨子",
+    "posiition": "坦克"
+  },
+  {
+    "name": "鲁班七号",
+    "alias": [
+      "鲁班"
+    ],
+    "displayName": "鲁班七号",
+    "position": "射手"
+  },
+  {
+    "name": "宫本武藏",
+    "alias": [
+      "宫本","武藏"
+    ],
+    "displayName": "宫本武藏",
+    "position": "战士"
+  },
+  {
+    "name": "牛魔",
+    "alias": [
+      "牛魔"
+    ],
+    "displayName": "牛魔",
+    "posiition": "坦克"
+  },
+  {
+    "name": "貂蝉",
+    "alias": [
+      "貂蝉"
+    ],
+    "displayName": "貂蝉",
+    "position": "法师"
+  },
+  {
+    "name": "典韦",
+    "alias": [
+      "典韦"
+    ],
+    "displayName": "典韦",
+    "position": "战士"
+  },
+  {
+    "name": "小乔",
+    "alias": [
+      "小乔"
+    ],
+    "displayName": "小乔",
+    "position": "法师"
+  },
+  {
+    "name": "甄姬",
+    "alias": [
+      "甄姬"
+    ],
+    "displayName": "甄姬",
+    "position": "法师"
+  },
+  {
+    "name": "妲己",
+    "alias": [
+      "妲己"
+    ],
+    "displayName": "妲己",
+    "position": "法师"
+  },
+  {
+    "name": "孙膑",
+    "alias": [
+      "孙膑"
+    ],
+    "displayName": "孙膑",
+    "position": "辅助"
+  },
+  {
+    "name": "武则天",
+    "alias": [
+      "武则天"
+    ],
+    "displayName": "武则天",
+    "position": "法师"
+  },
+  {
+    "name": "高渐离",
+    "alias": [
+      "高渐离"
+    ],
+    "displayName": "高渐离",
+    "position": "法师"
+  },
+  {
+    "name": "吕布",
+    "alias": [
+      "吕布"
+    ],
+    "displayName": "吕布",
+    "position": "战士"
+  },
+  {
+    "name": "孙悟空",
+    "alias": [
+      "孙悟空"
+    ],
+    "displayName": "孙悟空",
+    "position": "战士"
+  },
+  {
+    "name": "孙尚香",
+    "alias": [
+      "孙尚香"
+    ],
+    "displayName": "孙尚香",
+    "position": "射手"
+  },
+  {
+    "name": "达摩",
+    "alias": [
+      "达摩"
+    ],
+    "displayName": "达摩",
+    "position": "战士"
+  },
+  {
+    "name": "程咬金",
+    "alias": [
+      "程咬金"
+    ],
+    "displayName": "程咬金",
+    "posiition": "坦克"
+  },
+  {
+    "name": "扁鹊",
+    "alias": [
+      "扁鹊"
+    ],
+    "displayName": "扁鹊",
+    "position": "法师"
+  },
+  {
+    "name": "亚瑟",
+    "alias": [
+      "亚瑟"
+    ],
+    "displayName": "亚瑟",
+    "position": "战士"
+  },
+  {
+    "name": "阿轲",
+    "alias": [
+      "阿轲"
+    ],
+    "displayName": "阿轲",
+    "position": "刺客"
+  },
+  {
+    "name": "姜子牙",
+    "alias": [
+      "姜子牙"
+    ],
+    "displayName": "姜子牙",
+    "position": "法师"
+  },
+  {
+    "name": "周瑜",
+    "alias": [
+      "周瑜"
+    ],
+    "displayName": "周瑜",
+    "position": "法师"
+  },
+  {
+    "name": "老夫子",
+    "alias": [
+      "老夫子"
+    ],
+    "displayName": "老夫子",
+    "position": "战士"
+  },
+  {
+    "name": "嬴政",
+    "alias": [
+      "嬴政"
+    ],
+    "displayName": "嬴政",
+    "position": "法师"
+  },
+  {
+    "name": "曹操",
+    "alias": [
+      "曹操"
+    ],
+    "displayName": "曹操",
+    "position": "战士"
+  },
+  {
+    "name": "庄周",
+    "alias": [
+      "庄周"
+    ],
+    "displayName": "庄周",
+    "posiition": "坦克"
+  },
+  {
+    "name": "张良",
+    "alias": [
+      "张良"
+    ],
+    "displayName": "张良",
+    "position": "法师"
+  },
+  {
+    "name": "钟无艳",
+    "alias": [
+      "钟无艳"
+    ],
+    "displayName": "钟无艳",
+    "position": "战士"
+  },
+  {
+    "name": "芈月",
+    "alias": [
+      "芈月"
+    ],
+    "displayName": "芈月",
+    "position": "法师"
+  },
+  {
+    "name": "露娜",
+    "alias": [
+      "露娜"
+    ],
+    "displayName": "露娜",
+    "position": "战士"
+  },
+  {
+    "name": "廉颇",
+    "alias": [
+      "廉颇"
+    ],
+    "displayName": "廉颇",
+    "posiition": "坦克"
+  },
+  {
+    "name": "白起",
+    "alias": [
+      "白起"
+    ],
+    "displayName": "白起",
+    "posiition": "坦克"
+  },
+  {
+    "name": "张飞",
+    "alias": [
+      "张飞"
+    ],
+    "displayName": "张飞",
+    "posiition": "坦克"
+  },
+  {
+    "name": "刘备",
+    "alias": [
+      "刘备"
+    ],
+    "displayName": "刘备",
+    "position": "战士"
+  },
+  {
+    "name": "兰陵王",
+    "alias": [
+      "兰陵王"
+    ],
+    "displayName": "兰陵王",
+    "position": "刺客"
+  },
+  {
+    "name": "娜可露露",
+    "alias": [
+      "娜可露露"
+    ],
+    "displayName": "娜可露露",
+    "position": "刺客"
+  },
+  {
+    "name": "李白",
+    "alias": [
+      "李白"
+    ],
+    "displayName": "李白",
+    "position": "刺客"
+  },
+  {
+    "name": "钟馗",
+    "alias": [
+      "钟馗"
+    ],
+    "displayName": "钟馗",
+    "position": "法师"
+  },
+  {
+    "name": "李元芳",
+    "alias": [
+      "元芳"
+    ],
+    "displayName": "李元芳",
+    "position": "射手"
+  },
+  {
+    "name": "刘邦",
+    "alias": [
+      "刘邦"
+    ],
+    "displayName": "刘邦",
+    "posiition": "坦克"
+  },
+  {
+    "name": "不知火舞",
+    "alias": [
+      "不知火舞"
+    ],
+    "displayName": "不知火舞",
+    "position": "法师"
+  }
+]

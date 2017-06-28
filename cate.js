@@ -20,20 +20,6 @@ class Cate {
         }
         return null;
     }
-}
-class LOL extends Cate{
-    constructor(){
-        super();
-        // this.positions = Object.freeze({"Top":"上单","Jungle":"野","Mid":"中单","ADC":"AD","Support":"辅助"});
-        this.positions = Object.freeze({
-            "上单":{"alias":["上单"],"displayName":"上单"},
-            "打野":{"alias":["野"],"displayName":"打野"},
-            "中单":{"alias":["中"],"displayName":"中单"},
-            "ADC":{"alias":["AD"],"displayName":"ADC"},
-            "辅助":{"alias":["辅助"],"displayName":"辅助"},
-        });
-        this.heroes = lolheroes["lolheroes"];
-    }
     positionMatch(content){
         var lowerContent = content.toLowerCase();
         var position = null;
@@ -49,6 +35,21 @@ class LOL extends Cate{
         }
         return position;
     }
+}
+class LOL extends Cate{
+    constructor(){
+        super();
+        // this.positions = Object.freeze({"Top":"上单","Jungle":"野","Mid":"中单","ADC":"AD","Support":"辅助"});
+        this.positions = Object.freeze({
+            "上单":{"alias":["上单"],"displayName":"上单"},
+            "打野":{"alias":["野"],"displayName":"打野"},
+            "中单":{"alias":["中"],"displayName":"中单"},
+            "ADC":{"alias":["AD"],"displayName":"ADC"},
+            "辅助":{"alias":["辅助"],"displayName":"辅助"},
+        });
+        this.heroes = lolheroes;
+    }
+
 }
 class HS extends Cate{
     constructor(){
@@ -69,7 +70,7 @@ class HS extends Cate{
 class OW extends Cate{
     constructor(){
         super();
-        this.heroes = owheroes["owheroes"];
+        this.heroes = owheroes;
     }
 }
 class Dota2 extends Cate{
@@ -88,21 +89,39 @@ class OtherGame extends Cate{
         });
     }
 }
+class WZRY extends Cate{
+    constructor(){
+        super();
+        this.heroes = require("./source/wzryheroes.json");
+        this.positions = Object.freeze({
+            "坦克" : {"alias":["坦"] ,"showName": "坦克"},
+            "战士" : {"alias":["战"] ,"showName": "战士"},
+            "刺客" : {"alias":["刺客"] ,"showName": "刺客"},
+            "法师" : {"alias":["法师"] ,"showName": "法师"},
+            "射手" : {"alias":["射手"] ,"showName": "射手"},
+            "辅助" : {"alias":["辅助"] ,"showName": "辅助"}
+        });
+    }
+
+}
 const LiveCates = Object.freeze({
     "lol":"lol",
     "hs":"hs",
     "dota2":"dota2",
     "ow":"ow",
-    "otherGame":"othergame"
+    "otherGame":"othergame",
+    "wzry":"wzry"
 });
 const lol = new LOL();
 const ow = new OW();
 const hs = new HS();
 const dota2 = new Dota2();
 const otherGame = new OtherGame();
+const wzry = new WZRY();
 exports.lol = lol;
 exports.ow = ow;
 exports.hs = hs;
 exports.dota2 = dota2;
 exports.otherGame = otherGame;
 exports.liveCates = LiveCates;
+exports.wzry = wzry;
