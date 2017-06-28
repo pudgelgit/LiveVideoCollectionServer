@@ -9,7 +9,7 @@ const timer = require('timers');
 const common = require("./common");
 const grabInterval = 100000;
 const site = require("./site");
-timer.setImmediate(function () {
+timer.setInterval(function () {
     grabFamousAnchors();
     recommend();
 }, grabInterval);
