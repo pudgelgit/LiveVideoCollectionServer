@@ -155,7 +155,7 @@ class Douyu extends Site{
     parseRecommendHtml(htmlContent, cate) {
         var recommendData = [];
         var $ = cheerio.load(htmlContent);
-        var host = 'www.douyu.com';
+        var host = 'm.douyu.com';
         var lis = $('ul#live-list-contentbox li a');
         var self = this;
         lis.each(function (i, elem) {
@@ -189,7 +189,7 @@ class Panda extends Site{
     parseRecommendHtml(htmlContent, cate) {
         let recommendData = [];
         let $ = cheerio.load(htmlContent);
-        let host = 'www.panda.tv';
+        let host = 'm.panda.tv';
         let lis = $('.video-list-item-wrap');
         var self = this;
         lis.each(function (i, elem) {
@@ -227,7 +227,7 @@ class Panda extends Site{
 class Zhanqi extends Site{
 
     parseRecommendHtml(htmlContent,cate){
-        let host = "www.zhanqi.tv";
+        let host = "m.zhanqi.tv";
         let recommendData = [];
         var json = JSON.parse(htmlContent);
         var rooms = json["data"]["rooms"];
