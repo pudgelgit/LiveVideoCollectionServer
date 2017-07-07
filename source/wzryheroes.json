@@ -82,7 +82,7 @@
   {
     "name": "马可波罗",
     "alias": [
-      "马可波罗"
+      "马可"
     ],
     "displayName": "马可波罗",
     "position": "射手"
@@ -178,7 +178,7 @@
   {
     "name": "花木兰",
     "alias": [
-      "花木兰"
+      "木兰"
     ],
     "displayName": "花木兰",
     "position": "战士"
@@ -194,7 +194,8 @@
   {
     "name": "韩信",
     "alias": [
-      "韩信"
+      "韩信",
+      "韩白龙"
     ],
     "displayName": "韩信",
     "position": "刺客"
@@ -306,7 +307,8 @@
   {
     "name": "孙悟空",
     "alias": [
-      "孙悟空"
+      "悟空",
+      "猴子"
     ],
     "displayName": "孙悟空",
     "position": "战士"
@@ -354,7 +356,9 @@
   {
     "name": "阿轲",
     "alias": [
-      "阿轲"
+      "阿轲",
+      "阿珂",
+      "荆轲"
     ],
     "displayName": "阿轲",
     "position": "刺客"
@@ -474,7 +478,7 @@
   {
     "name": "兰陵王",
     "alias": [
-      "兰陵王"
+      "兰陵"
     ],
     "displayName": "兰陵王",
     "position": "刺客"
@@ -482,7 +486,7 @@
   {
     "name": "娜可露露",
     "alias": [
-      "娜可露露"
+      "露露"
     ],
     "displayName": "娜可露露",
     "position": "刺客"

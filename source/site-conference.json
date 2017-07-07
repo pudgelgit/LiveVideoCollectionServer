@@ -6,18 +6,18 @@
       "protocol":"https",
       "recommendPrefix": "https://www.douyu.com/directory/game/",
       "recommendCates": {
-        "lol": ["lol"],
-        "ow": ["overwatch"],
-        "hs": ["how"],
-        "dota2": ["dota2"],
-        "otherGame": ["tvgame"],
-        "wzry":["wzry"]
+        "lol": ["LOL?page=1&isAjax=1","LOL?page=2&isAjax=1","LOL?page=3&isAjax=1","LOL?page=4&isAjax=1","LOL?page=5&isAjax=1"],
+        "ow": ["overwatch?page=0&isAjax=1"],
+        "hs": ["how?page=0&isAjax=1"],
+        "dota2": ["dota2?page=0&isAjax=1"],
+        "otherGame": ["tvgame?page=0&isAjax=1"],
+        "wzry":["wzry?page=1&isAjax=1","wzry?page=2&isAjax=1","wzry?page=3&isAjax=1","wzry?page=4&isAjax=1"]
       }
     },
     {
       "siteName": "熊猫",
       "protocol":"https",
-      "recommendPrefix": "https://www.panda.tv/cate/",
+      "recommendPrefix": "https://www.panda.tv/ajax_sort?pageno=1&pagenum=200&classification=",
       "recommendCates": {
         "lol": ["lol"],
         "ow": ["overwatch"],
@@ -47,12 +47,12 @@
       "protocol":"https",
       "recommendPrefix": "https://www.zhanqi.tv/api/static/v2.1/game/live/",
       "recommendCates": {
-        "lol": ["6/30/1.json","6/30/2.json","6/30/3.json","6/30/4.json"],
+        "lol": ["6/30/1.json","6/30/2.json"],
         "ow": ["82/30/1.json"],
         "hs": ["9/30/1.json"],
         "dota2": ["10/30/1.json"],
         "otherGame": ["49/30/1.json","49/30/2.json"],
-        "wzry":["115/30/1.json","115/30/2.json","115/30/3.json"]
+        "wzry":["115/30/1.json","115/30/2.json"]
       }
     }
   ]

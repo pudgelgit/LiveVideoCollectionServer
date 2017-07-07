@@ -25,11 +25,13 @@ function recommend() {
         }));
     }
     promise.all(promises).then(function (values) {
+        console.log("then in grab");
         for (let i = 0; i < values.length; i++) {
             if (values[i] != null && values[i] != undefined) {
                 recommendData = recommendData.concat(values[i]);
             }
         }
+
         if (recommendData.length > 0) {
             // for (let i = 0; i < recommendData.length; i++) {
             //     setInfoOfRoom(recommendData[i]);

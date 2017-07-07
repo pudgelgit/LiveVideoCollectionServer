@@ -94,12 +94,12 @@ class WZRY extends Cate{
         super();
         this.heroes = require("./source/wzryheroes.json");
         this.positions = Object.freeze({
-            "坦克" : {"alias":["坦"] ,"showName": "坦克"},
-            "战士" : {"alias":["战"] ,"showName": "战士"},
-            "刺客" : {"alias":["刺客"] ,"showName": "刺客"},
-            "法师" : {"alias":["法师"] ,"showName": "法师"},
-            "射手" : {"alias":["射手"] ,"showName": "射手"},
-            "辅助" : {"alias":["辅助"] ,"showName": "辅助"}
+            "坦克" : {"alias":["坦"] ,"displayName": "坦克"},
+            "战士" : {"alias":["战"] ,"displayName": "战士"},
+            "刺客" : {"alias":["刺客"] ,"displayName": "刺客"},
+            "法师" : {"alias":["法师","法王"] ,"displayName": "法师"},
+            "射手" : {"alias":["射手"] ,"displayName": "射手"},
+            "辅助" : {"alias":["辅助"] ,"displayName": "辅助"}
         });
     }
 

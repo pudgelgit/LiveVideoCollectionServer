@@ -43,6 +43,8 @@ class Site {
                 self.makeupRoomInfo(room);
             }
             callback(self.recommendData);
+        }).catch((reason) => {
+            console.log("reject:"+resizeBy());
         });
 
     }
@@ -51,7 +53,7 @@ class Site {
         var site = this;
         var urlObj = url.parse(urlstring);
         return new promise(function (solve, reject) {
-            timer.setTimeout(() => request.get(urlObj, function (res) {
+            request.get(urlObj, function (res) {
                 const statusCode = res.statusCode;
                 if (statusCode != 200) {
                     common.handleError(new Error('status code :' + statusCode), 'request ' + siteName + ' ' + cate);
@@ -75,10 +77,10 @@ class Site {
             }).on('error', function (err) {
                 solve(null);
                 common.handleError(err, 'request ' + siteName + ' ' + cate);
-            }).setTimeout(50000, () => {
+            }).setTimeout(30000, () => {
                 solve(null);
                 common.handleError(new Error('timeout'), 'request ' + siteName + ' ' + cate);
-            }), dalay);
+            });
         });
     }
 
@@ -156,7 +158,7 @@ class Douyu extends Site{
         var recommendData = [];
         var $ = cheerio.load(htmlContent);
         var host = 'm.douyu.com';
-        var lis = $('ul#live-list-contentbox li a');
+        var lis = $('a.play-list-link');
         var self = this;
         lis.each(function (i, elem) {
             var a = $(this);
@@ -173,6 +175,11 @@ class Douyu extends Site{
             anchorItem.address = link;
             anchorItem.anchorName = a.find('.dy-name').text();
             anchorItem.viewNum = a.find('.dy-num').text();
+            if (anchorItem.viewNum > 10000){
+                var nn = parseInt(anchorItem.viewNum )/10000;
+                nn = parseInt(nn);
+                anchorItem.viewNum = nn + "万";
+            }
             anchorItem.siteName = self.siteName;
             anchorItem.cate = cate;
             anchorItem.position = null;
@@ -186,40 +193,83 @@ class Douyu extends Site{
 }
 
 class Panda extends Site{
+    // parseRecommendHtml(htmlContent, cate) {
+    //     let recommendData = [];
+    //     let $ = cheerio.load(htmlContent);
+    //     let host = 'm.panda.tv';
+    //     let lis = $('.video-list-item-wrap');
+    //     var self = this;
+    //     lis.each(function (i, elem) {
+    //         let a = $(this);
+    //         let anchorItem = {};
+    //         anchorItem.roomName = a.find('.video-title').text();
+    //         let link = a.attr('href');
+    //         let id = a.attr("data-id");
+    //         let temp = url.parse(link);
+    //         if (temp.host == null) {
+    //             temp.protocol = 'https:';
+    //             temp.host = host;
+    //             link = url.format(temp);
+    //         }
+    //         anchorItem.address = link;
+    //         anchorItem.anchorName = a.find('.video-nickname').text();
+    //         anchorItem.viewNum = a.find('.video-number').text();
+    //         if (anchorItem.viewNum > 10000){
+    //             var nn = parseInt(anchorItem.viewNum )/10000;
+    //             nn = parseInt(nn);
+    //             anchorItem.viewNum = nn + "万";
+    //         }
+    //         anchorItem.siteName = self.siteName;
+    //         anchorItem.cate = cate;
+    //         anchorItem.position = null;
+    //         anchorItem.hero = null;
+    //         anchorItem.tags = null;
+    //         anchorItem.appAddress = "https://m.gate.panda.tv/openroom/"+id;
+    //         recommendData.push(anchorItem);
+    //     });
+    //     return recommendData;
+    // }
     parseRecommendHtml(htmlContent, cate) {
         let recommendData = [];
-        let $ = cheerio.load(htmlContent);
         let host = 'm.panda.tv';
-        let lis = $('.video-list-item-wrap');
+        var json = JSON.parse(htmlContent);
+        var rooms = json["data"]["items"];
         var self = this;
-        lis.each(function (i, elem) {
-            let a = $(this);
-            let anchorItem = {};
-            anchorItem.roomName = a.find('.video-title').text();
-            let link = a.attr('href');
-            let id = a.attr("data-id");
-            let temp = url.parse(link);
-            if (temp.host == null) {
-                temp.protocol = 'https:';
-                temp.host = host;
-                link = url.format(temp);
+
+        if (rooms != undefined && rooms.length > 0) {
+            for (var i in rooms){
+                var room = rooms[i];
+                if (i == 1 ){
+                }
+                let anchorItem = {};
+                anchorItem.roomName = room["name"];
+                let id = room["id"];
+                let userinfo = room["userinfo"];
+                var link = id;
+                let temp = url.parse(id);
+                if (temp.host == null) {
+                    temp.protocol = 'https:';
+                    temp.host = host;
+                    link = url.format(temp);
+                }
+                anchorItem.address = link;
+                anchorItem.anchorName = userinfo["nickName"];
+                anchorItem.viewNum = room["person_num"];
+                if (anchorItem.viewNum > 10000){
+                    var nn = parseInt(anchorItem.viewNum )/10000;
+                    nn = parseInt(nn);
+                    anchorItem.viewNum = nn + "万";
+                }
+                anchorItem.siteName = self.siteName;
+                anchorItem.cate = cate;
+                anchorItem.position = null;
+                anchorItem.hero = null;
+                anchorItem.tags = null;
+                anchorItem.appAddress = "https://m.gate.panda.tv/openroom/"+id;
+                recommendData.push(anchorItem);
             }
-            anchorItem.address = link;
-            anchorItem.anchorName = a.find('.video-nickname').text();
-            anchorItem.viewNum = a.find('.video-number').text();
-            if (anchorItem.viewNum > 10000){
-                var nn = parseInt(anchorItem.viewNum )/10000;
-                nn = parseInt(nn);
-                anchorItem.viewNum = nn + "万";
-            }
-            anchorItem.siteName = self.siteName;
-            anchorItem.cate = cate;
-            anchorItem.position = null;
-            anchorItem.hero = null;
-            anchorItem.tags = null;
-            anchorItem.appAddress = "https://m.gate.panda.tv/openroom/"+id;
-            recommendData.push(anchorItem);
-        });
+        }
+        console.log(recommendData[0]);
         return recommendData;
     }
 }
@@ -231,7 +281,6 @@ class Zhanqi extends Site{
         let recommendData = [];
         var json = JSON.parse(htmlContent);
         var rooms = json["data"]["rooms"];
-
         var self = this;
         if (rooms != undefined && rooms.length > 0) {
             for (var i in rooms){
@@ -249,6 +298,11 @@ class Zhanqi extends Site{
                 anchorItem.address = link;
                 anchorItem.anchorName = room["nickname"];
                 anchorItem.viewNum = room["online"];
+                if (anchorItem.viewNum > 10000){
+                    var nn = parseInt(anchorItem.viewNum )/10000;
+                    nn = parseInt(nn);
+                    anchorItem.viewNum = nn + "万";
+                }
                 anchorItem.siteName = self.siteName;
                 anchorItem.cate = cate;
                 anchorItem.position = null;
@@ -258,8 +312,10 @@ class Zhanqi extends Site{
                 let subID = room["uid"];
                 // anchorItem.appAddress = "https://m.zhanqi.tv/app.php?roomid="+room["code"];
                 recommendData.push(anchorItem);
+
             }
         }
+
         return recommendData;
     }
 }
@@ -268,7 +324,7 @@ class Huya extends Site{
     parseRecommendHtml(htmlContent,cate){
         let recommendData = [];
         let $ = cheerio.load(htmlContent);
-        let host = 'www.huya.com';
+        let host = 'm.huya.com';
         let lis = $(".game-live-item");
         var self = this;
         lis.each(function (i, elem) {
@@ -285,6 +341,11 @@ class Huya extends Site{
             anchorItem.address = link;
             anchorItem.anchorName = a.find('.nick').text();
             anchorItem.viewNum = a.find('.js-num').text();
+            if (anchorItem.viewNum > 10000){
+                var nn = parseInt(anchorItem.viewNum )/10000;
+                nn = parseInt(nn);
+                anchorItem.viewNum = nn + "万";
+            }
             anchorItem.siteName = self.siteName;
             anchorItem.cate = cate;
             anchorItem.position = null;
@@ -293,6 +354,7 @@ class Huya extends Site{
             anchorItem.appAddress = null;
             recommendData.push(anchorItem);
         });
+
         return recommendData;
     }
 }
