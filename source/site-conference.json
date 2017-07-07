@@ -6,12 +6,12 @@
       "protocol":"https",
       "recommendPrefix": "https://www.douyu.com/directory/game/",
       "recommendCates": {
-        "lol": ["LOL?page=1&isAjax=1","LOL?page=2&isAjax=1","LOL?page=3&isAjax=1","LOL?page=4&isAjax=1","LOL?page=5&isAjax=1"],
+        "lol": ["LOL?page=1&isAjax=1","LOL?page=2&isAjax=1","LOL?page=3&isAjax=1","LOL?page=4&isAjax=1","LOL?page=5&isAjax=1","LOL?page=6&isAjax=1","LOL?page=7&isAjax=1","LOL?page=8&isAjax=1"],
         "ow": ["overwatch?page=0&isAjax=1"],
         "hs": ["how?page=0&isAjax=1"],
         "dota2": ["dota2?page=0&isAjax=1"],
         "otherGame": ["tvgame?page=0&isAjax=1"],
-        "wzry":["wzry?page=1&isAjax=1","wzry?page=2&isAjax=1","wzry?page=3&isAjax=1","wzry?page=4&isAjax=1"]
+        "wzry":["wzry?page=1&isAjax=1","wzry?page=2&isAjax=1","wzry?page=3&isAjax=1","wzry?page=4&isAjax=1","wzry?page=5&isAjax=1","wzry?page=6&isAjax=1","wzry?page=7&isAjax=1"]
       }
     },
     {
