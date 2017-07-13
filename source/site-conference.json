@@ -47,12 +47,12 @@
       "protocol":"https",
       "recommendPrefix": "https://www.zhanqi.tv/api/static/v2.1/game/live/",
       "recommendCates": {
-        "lol": ["6/30/1.json","6/30/2.json"],
+        "lol": ["6/30/1.json"],
         "ow": ["82/30/1.json"],
         "hs": ["9/30/1.json"],
         "dota2": ["10/30/1.json"],
         "otherGame": ["49/30/1.json","49/30/2.json"],
-        "wzry":["115/30/1.json","115/30/2.json"]
+        "wzry":["115/30/1.json"]
       }
     }
   ]

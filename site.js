@@ -34,19 +34,29 @@ class Site {
         promise.all(promises).then(function (values) {
             self.recommendData = [];
             for (var j = 0; j < values.length; j++) {
-                if (values[j] != null && values[j] != undefined) {
+                if (values[j] != null && values[j] != undefined && values[j].length > 0) {
                     self.recommendData = self.recommendData.concat(values[j]);
                 }
             }
+            self.recommendData = self.uniq(self.recommendData);
             for (var i in self.recommendData){
                 var room = self.recommendData[i];
                 self.makeupRoomInfo(room);
             }
+            console.log("then in" + self.siteName);
             callback(self.recommendData);
         }).catch((reason) => {
             console.log("reject:"+resizeBy());
         });
 
+    }
+
+    uniq(a) {
+        var seen = new Set();
+        return a.filter(function(item) {
+            var k = item.anchorName;
+            return seen.has(k) ? false : seen.add(k);
+        })
     }
     //抓取推荐主页数据
     promiseGetRecommend(urlstring, cate, siteName, dalay,request) {
@@ -269,7 +279,6 @@ class Panda extends Site{
                 recommendData.push(anchorItem);
             }
         }
-        console.log(recommendData[0]);
         return recommendData;
     }
 }
@@ -353,10 +362,58 @@ class Huya extends Site{
             anchorItem.tags = null;
             anchorItem.appAddress = null;
             recommendData.push(anchorItem);
+            //https://secstatic.yy.com/huya/?sid=78941969&subsid=2559461593&screenType=0&liveSourceType=1"
         });
 
         return recommendData;
     }
+
+    // parseRecommendHtml(htmlContent,cate){
+    //     function findTextAndReturnRemainder(target, variable){
+    //         var chopFront = target.substring(target.search(variable)+variable.length,target.length);
+    //         var result = chopFront.substring(0,chopFront.search(";"));
+    //         return result;
+    //     }
+    //     let recommendData = [];
+    //     let $ = cheerio.load(htmlContent);
+    //     let host = 'm.huya.com';
+    //     let text = $($('script')).text();
+    //     var self = this;
+    //     var findAndClean = findTextAndReturnRemainder(text,"var LIST_DATA =");
+    //     var rooms = JSON.parse(findAndClean);
+    //     for (var i in rooms){
+    //         var room = rooms[i];
+    //         let anchorItem = {};
+    //         anchorItem.roomName = room["roomName"];
+    //         let link = room["privateHost"];
+    //
+    //         let temp = url.parse(link);
+    //         if (temp.host == null) {
+    //             temp.protocol = 'http:';
+    //             temp.host = host;
+    //             link = url.format(temp);
+    //         }
+    //         anchorItem.address = link;
+    //         anchorItem.anchorName = room["nick"];
+    //         anchorItem.viewNum = room["totalCount"];
+    //         if (anchorItem.viewNum > 10000){
+    //             var nn = parseInt(anchorItem.viewNum )/10000;
+    //             nn = parseInt(nn);
+    //             anchorItem.viewNum = nn + "万";
+    //         }
+    //         anchorItem.siteName = self.siteName;
+    //         anchorItem.cate = cate;
+    //         anchorItem.position = null;
+    //         anchorItem.hero = null;
+    //         anchorItem.tags = null;
+    //         let channel = room["channel"];
+    //         let liveChannel = room["liveChannel"];
+    //         anchorItem.appAddress =  "https://secstatic.yy.com/huya/?sid="+channel+"&subsid="+liveChannel+"&screenType=0&liveSourceType=1";
+    //         recommendData.push(anchorItem);
+    //     }
+    //     console.log(recommendData[0]);
+    //     return recommendData;
+    // }
 }
 
 const sites = siteConferenceData.sites;
